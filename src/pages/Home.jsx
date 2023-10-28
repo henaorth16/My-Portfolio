@@ -6,7 +6,7 @@ function Home() {
     return (
         <>
             <div className="text-stone-100 text-center h-full w-full flex justify-center items-center">
-                <div className="flex flex-col justify-center items-center w-1/2 gap-3">
+                <div className="flex flex-col justify-center items-center md:w-1/2 w-3/4 gap-3">
                     <div className="w-[8rem] h-[8rem] mb-4">
                         <img className="w-full h-full object-cover rounded-full" src={image} />
                     </div>

@@ -10,12 +10,13 @@ import About from "./pages/About";
 import Testimonial from "./pages/Testimonial";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
+import './index.css'
 
 function App() {
   return (
         <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation">
          <div className='w-full h-[100vh]'><Home/></div>
-         <div className='w-full h-[100vh]'><About /></div>
+         <div className='w-full h-[100vh] px-[10%] md:px[20%]'><About /></div>
          <div className='w-full h-[100vh]'><Portfolio /></div>   
          <div className='w-full h-[100vh]'><Testimonial /></div>
          <div className='w-full h-[100vh]'><Contact /></div>
