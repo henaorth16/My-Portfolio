@@ -4,19 +4,17 @@
     height: 200px;
     overflow: hidden;
     position: relative;
+    /* background-color: red; */
   }
   
   .about-text {
-    font-family: monospace;
+    letter-spacing: 1px;
     font-size: 2rem;
-    position: absolute;
     top: 50%;
-    margin-left: 4rem;
+    left: 50%;
     opacity: 0;
-    /* transition: all 1s ease; */
-    transform: translateY(100%) rotateX(70deg);
+    transform: translate(-40%, 100%) rotateX(70deg);
   }
-
   .about-text.active{
         animation: fade 2s ease-in-out alternate ;
   }
@@ -36,7 +34,9 @@
     }
   }
   
- 
+ .wrapper::-webkit-scrollbar{
+  display: none;
+ }
 
   /* .about-text.active {
     opacity: 1;

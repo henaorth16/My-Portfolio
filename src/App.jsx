@@ -16,7 +16,7 @@ function App() {
   return (
         <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation">
          <div className='w-full h-[100vh]'><Home/></div>
-         <div className='w-full h-[100vh] px-[10%] md:px[20%]'><About /></div>
+         <div className='w-full h-[100vh] px-[7%] md:px[4rem]'><About /></div>
          <div className='w-full h-[100vh]'><Portfolio /></div>   
          <div className='w-full h-[100vh]'><Testimonial /></div>
          <div className='w-full h-[100vh]'><Contact /></div>

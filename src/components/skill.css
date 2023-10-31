@@ -1,0 +1,12 @@
+.prog{
+    accent-color: rgb(224, 49, 18);
+    
+}
+.prog::-webkit-slider-runnable-track{
+    /* background-color: aliceblue; */
+    height: 6px;
+    overflow-y: hidden;
+}
+/* .prog:hover, .prog:focus{
+    all: unset;
+} */
