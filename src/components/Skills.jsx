@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade';
 import './skill.css'
 
 const skills = [
@@ -41,15 +42,20 @@ function Skills() {
             <hr className='w-[80%] mx-auto' />
             <div className='skill-list  w-full h-auto mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 md:gap-3 justify-center'>
                 {skills.map((skill, index) => (
-                    <div className="h-auto p-3 rounded-md bg-[#2f2f2f] flex gap-2 md:gap-4 border-l-8 border-red-500 items-center" key={index}>
+                    <Fade bottom>
+                        <div className="h-auto p-3 rounded-md bg-[#2f2f2f] flex gap-2 md:gap-4 border-l-8 border-red-500 items-center" >
                         <div className="w-[20%] max-w-[3.5rem]">
                             <img src={skill.icon} alt={skill.title + "icon"} className='w-full' />
                         </div>
                         <div className="flex flex-col justify-between w-[9rem]">
                             <h1 className='mb-1 text-xl font-semi-bold text-stone-100 spacing-1'>{skill.title}</h1>
-                            <div title={skill.progValue + "%"} className='w-full md:h-[0.34rem] h-1 bg-yellow-50 relative rounded-full'> <span className='absolute rounded-xl top-0 left-0 h-full bg-red-500' style={{ width: `${skill.progValue}%` }}></span> </div>
+                            <div title={skill.progValue + "%"} className='w-full md:h-[0.34rem] h-1 bg-gray-400 relative rounded-full overflow-hidden'> 
+                             <span className='absolute rounded-xl left-0  h-full bg-red-500' style={{ width: `${skill.progValue}%`}}></span> 
+                            </div>
                         </div>
                     </div>
+                    </Fade>
+                    
                 ))}
 
             </div>

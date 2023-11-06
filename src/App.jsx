@@ -2,6 +2,7 @@
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/custom-animations/open-animation.css';
 import 'react-awesome-slider/dist/styles.css';
+import AnimatedCursor from "react-animated-cursor"
 // import { useState } from 'react'
 import './App.css'
 
@@ -14,33 +15,28 @@ import './index.css'
 
 function App() {
   return (
-        <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation">
+    <>
+    <AnimatedCursor
+  color="205,80,0"
+  innerSize={8}
+  outerSize={28}
+  innerScale={1}
+  outerScale={1.5}
+  showSystemCursor={true}
+/>
+    <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation">
+         
          <div className='w-full h-[100vh]'><Home/></div>
          <div className='w-full h-[100vh] px-[7%] md:px[4rem]'><About /></div>
          <div className='w-full h-[100vh]'><Portfolio /></div>   
          <div className='w-full h-[100vh]'><Testimonial /></div>
          <div className='w-full h-[100vh]'><Contact /></div>
-                  
         </AwesomeSlider>
+    </>
+        
   );
 }
-// function App() {
-//   return (
-//     <BrowserRouter>
-//         <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation">
-//       <Routes>
 
-//         <Route path='/' element={<Home />} />
-//         <Route path='/about' element={<About />} />
-//         <Route path='/testimonial' element={<Testimonial />} />
-//         <Route path='/contact' element={<Contact />} />
-//         <Route path='/portfolio' element={<Portfolio />} />
-
-//       </Routes>
-//         </AwesomeSlider>
-//     </BrowserRouter>
-//   );
-// }
 
 
 export default App

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./About.css";
+import "../components/About.css";
 import image from '../assets/image/img.jpg'
 import Skills from "../components/Skills";
+import Education from "../components/Education";
+import Additional from "../components/Additional";
+import Me from "../components/Me";
 
 const texts = ["Developer", "Designer", "Freelancer"];
 
@@ -28,10 +31,12 @@ const About = () => {
         </span>
       ))}
       </div>
-      <div className="sm:px-10 px-3 w-full wrapper overflow-auto grid grid-cols-2 gap-5">
-        <Skills />
-        <div className="bg-[#232323]">education</div>
-        <div className="bg-green-400">additional</div>
+
+      <div className="sm:px-10 px-3 w-full wrapper overflow-auto grid md:grid-cols-2 gap-5">
+        <Me />        {/* About me component*/}
+        <Skills />    {/* Skills component*/}
+        <Additional/> {/* Additional component*/}
+        <Education /> {/* Education component*/}
         <div className="bg-green-400">other</div>
         <div className="h-[19rem] bg-green-400">other</div>
       </div>
