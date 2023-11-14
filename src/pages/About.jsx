@@ -4,6 +4,7 @@ import image from '../assets/image/img.jpg'
 import Skills from "../components/Skills";
 import Education from "../components/Education";
 import Additional from "../components/Additional";
+import Credential from "../components/Credential";
 import Me from "../components/Me";
 
 const texts = ["Developer", "Designer", "Freelancer"];
@@ -37,8 +38,7 @@ const About = () => {
         <Skills />    {/* Skills component*/}
         <Additional/> {/* Additional component*/}
         <Education /> {/* Education component*/}
-        <div className="bg-green-400">other</div>
-        <div className="h-[19rem] bg-green-400">other</div>
+        <Credential /> {/* Credentials component*/}
       </div>
     </div>
   );

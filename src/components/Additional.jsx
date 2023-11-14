@@ -1,8 +1,9 @@
 import React from 'react'
 import "./About.css"
 import Fade from 'react-reveal/Fade';
-import { BsClock } from "react-icons/bs";
-import { GrGroup } from "react-icons/gr";
+import { MdAccessTimeFilled } from "react-icons/md";
+import { HiMiniUserGroup } from "react-icons/hi2";
+import { FaLightbulb } from "react-icons/fa";
 // const additional = [
 //   {
 //     icon:"",
@@ -41,38 +42,34 @@ function Additional() {
 <ol className="relative border-l border-gray-200">
 
     <li className="ml-[2.4rem] md:ml[3rem] mt-8 my-2">
-      <Fade bottom>
+      <Fade bottom delay={900}>
         <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-[#232323] rounded-full outline outline-gray-300 outline-2 md:-left-6 -left-4 ">
-        <BsClock className='text-red-500 md:text-2xl font-semibold'/>
+        <MdAccessTimeFilled className='text-red-500 text-2xl font-semibold'/>
         </span>
-        <h3 className="mb-1 text-xl font-semibold text-white">Flowbite Library v1.2.2</h3>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2003 - 2005</time>
-        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+        <h3 className="mb-1 text-xl font-semibold text-white">Lorem, ipsum dolor.</h3>
+        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, maxime?</p>
       </Fade>
     </li>
 
 
 
     <li className="ml-[2.4rem] md:ml[3rem] mt-8 my-2">
-      <Fade bottom>
+      <Fade bottom delay={900}>
         <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-[#232323] rounded-full outline outline-gray-300 outline-2 md:-left-6 -left-4 ">
-        <GrGroup className='text-white md:text-2xl font-semibold'/>
+        <HiMiniUserGroup className='text-red-500 text-2xl font-semibold'/>
         </span>
-        <h3 className="mb-1 text-xl font-semibold text-white">Flowbite Library v1.2.2</h3>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2003 - 2005</time>
-        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
-      </Fade>
-    </li>
-
+        <h3 className="mb-1 text-xl font-semibold text-white">kdnn  dn dd </h3>
+        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis temporibus voluptas at reprehenderit vel officiis sint quod ut asperiores ad.</p>
+        </Fade>
+     </li>
 
     <li className="ml-[2.4rem] md:ml[3rem] mt-8 my-2">
-      <Fade bottom>
+      <Fade bottom delay={900}>
         <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-[#232323] rounded-full outline outline-gray-300 outline-2 md:-left-6 -left-4 ">
-        <BsClock className='text-red-500 md:text-2xl font-semibold'/>
+        <FaLightbulb className='text-red-500 text-2xl font-semibold'/>
         </span>
-        <h3 className="mb-1 text-xl font-semibold text-white">Flowbite Library v1.2.2</h3>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2003 - 2005</time>
-        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+        <h3 className="mb-1 text-xl font-semibold text-white"> Lorem, ipsum dolor.</h3>
+        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis temporibus voluptas at reprehenderit vel officiis sint quod ut asperiores ad.</p>
       </Fade>
     </li>
 </ol>
