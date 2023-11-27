@@ -37,20 +37,20 @@ const skills = [
 
 function Skills() {
     return (
-        <div className='bg-[#232222]  text-stone-900 py-5 col-span-2 px-7 md:px-10 rounded-xl'>
-            <h2 className='m-2 ml-[10%] text-2xl text-red-500 font-bold'>Skills</h2>
+        <div className='bg-secondary-800  text-secondary-300 py-5 col-span-2 px-7 md:px-10 rounded-xl'>
+            <h2 className='m-2 ml-[10%] text-2xl text-primary-500 font-bold'>Skills</h2>
             <hr className='w-[80%] mx-auto' />
             <div className='skill-list  w-full h-auto mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 md:gap-3 justify-center'>
                 {skills.map((skill, index) => (
                     <Fade bottom >
-                        <div className="h-auto p-3 rounded-md bg-[#2f2f2f] flex gap-2 md:gap-4 border-l-8 border-red-500 items-center" >
+                        <div className="h-auto p-3 rounded-md bg-secondary-700 flex gap-2 md:gap-4 border-l-8 border-primary-500 items-center" >
                         <div className="w-[20%] max-w-[3.5rem]">
                             <img src={skill.icon} alt={skill.title + "icon"} className='w-full' />
                         </div>
                         <div className="flex flex-col justify-between w-[9rem]">
-                            <h1 className='mb-1 text-xl font-semi-bold text-stone-400 spacing-1'>{skill.title}</h1>
-                            <div title={skill.progValue + "%"} className='w-full md:h-[0.34rem] h-1 bg-gray-400 relative rounded-full overflow-hidden'> 
-                             <span className='absolute rounded-xl left-0  h-full bg-red-500' style={{ width: `${skill.progValue}%`}}></span> 
+                            <h1 className='mb-1 text-xl font-semi-bold spacing-1'>{skill.title}</h1>
+                            <div title={skill.progValue + "%"} className='w-full md:h-[0.34rem] h-1 bg-secondary-400 relative rounded-full overflow-hidden'> 
+                             <span className='absolute rounded-xl left-0  h-full bg-primary-500' style={{ width: `${skill.progValue}%`}}></span> 
                             </div>
                         </div>
                     </div>

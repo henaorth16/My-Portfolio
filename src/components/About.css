@@ -9,7 +9,7 @@
   
   .about-text {
     letter-spacing: 1px;
-    font-size: 2rem;
+    font-size: 2.4rem;
     top: 50%;
     left: 50%;
     opacity: 0;
@@ -37,7 +37,18 @@
  .wrapper::-webkit-scrollbar{
   display: none;
  }
-
+ div.wrapper.testimony .image-wrapper::after{
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
+  border: 2px solid #dc2626;
+  border-radius: 0.5rem;
+  z-index: -1;
+ }
   /* .about-text.active {
     opacity: 1;
     transform: translateY(0);

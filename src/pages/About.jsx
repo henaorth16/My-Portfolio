@@ -21,13 +21,13 @@ const About = () => {
   }, [currentIndex]);
 
   return (
-    <div className="text-stone-100 w-full h-full flex flex-col items-center">
+    <div className="text-secondary-300 w-full h-full flex flex-col items-center">
       <div className=" relative  h-[3rem]  flex justify-center mt-20">
-        <h2 className=" font-[verdana] text-center sm:left-[50%] left-[-40%] translate-x-[-3rem] w-[100vw] md:w-[7rem] text-[2rem]">I'm</h2>
+        <h2 className="text-center sm:left-[50%] left-[-40%] translate-x-[-3rem] w-[100vw] md:w-[7rem] text-[2rem] font-semibold">I'm</h2>
         {texts.map((text, index) => (
         <span
           key={index}
-          className={`absolute about-text ${index === currentIndex ? "active" : ""}`}>
+          className={`absolute font-black text-primary-500 about-text ${index === currentIndex ? "active" : ""}`}>
           {text}
         </span>
       ))}
@@ -40,6 +40,7 @@ const About = () => {
         <Education /> {/* Education component*/}
         <Credential /> {/* Credentials component*/}
       </div>
+      <div className="md:my-2 my-1">E-mail me on <a className="text-primary-500 hover:text-primary-400" href="">emyayehenok@gmail.com</a></div>
     </div>
   );
 };
