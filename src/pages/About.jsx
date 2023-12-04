@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../components/About.css";
-import image from '../assets/image/img.jpg'
 import Skills from "../components/Skills";
 import Education from "../components/Education";
 import Additional from "../components/Additional";

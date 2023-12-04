@@ -35,8 +35,8 @@ export default {
       },
     },
     fontFamily:{
-      heading: ['Montserrat'],
-      par: ['Lato', 'sans'],
+      heading: ['Montserrat',"sans-serif"],
+      par: ['Lato', "sans-serif"],
       sans: ['sans-serif']
     },
     extend: {},

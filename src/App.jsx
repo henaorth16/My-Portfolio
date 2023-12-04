@@ -6,7 +6,7 @@ import 'react-awesome-slider/dist/styles.css';
 import AnimatedCursor from "react-animated-cursor"
 import './App.css'
 import './index.css'
-import Loader from './pages/Loader'
+import Loader from './components/Loader'
 
 const Home = lazy(() =>  import('./pages/Home'));
 const About = lazy(() =>  import('./pages/About'));
