@@ -1,19 +1,19 @@
 import React from "react"
 import image from '../assets/image/image.jpg'
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 // import {Link} from 'react-router-dom'
 
 function Home() {
     return <>
             <div className="text-secondary-200 text-center h-full w-full flex justify-center items-center">
                 <div className="flex flex-col justify-center items-center md:w-1/2 w-3/4 gap-3 font-par">
-                    <Fade>
+                    <Fade damping={}>
                         <div className="w-[10rem] h-[10rem] mb-6">
                             <img className="w-[460px] h-[100%] object-fill rounded-full" src={image} alt="hero image" />
                         </div>
                     </Fade>
                     <Fade>
-                    <h2 className="text-xl font-bold tracking-wider">Hello There, Here is <Fade top><span className="text-primary-500 text-[1.4rem] font-heading font-black">HENOK EMYAYE</span></Fade>  </h2>
+                    <h2 className="text-xl font-bold tracking-wider">Hello There, Here is <Fade><span className="text-primary-500 text-[1.4rem] font-heading font-black">HENOK EMYAYE</span></Fade>  </h2>
                     </Fade>
                     <p className="font-par">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente earum eligendi sit tempora, id mollitia animi expedita aliquid tempore eos nemo maxime culpa et voluptate assumenda fuga fugiat!</p>
                     <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-900 rounded-md hover:bg-opacity-70  focus:z-10 focus:ring-1 focus:outline-none">

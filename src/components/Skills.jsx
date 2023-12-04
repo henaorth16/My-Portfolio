@@ -1,5 +1,5 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import './skill.css'
 
 const skills = [
@@ -42,7 +42,7 @@ function Skills() {
             <hr className='w-[80%] mx-auto' />
             <div className='skill-list  w-full h-auto mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 md:gap-3 justify-center'>
                 {skills.map((skill, index) => (
-                    <Fade bottom >
+                    <Fade>
                         <div className="h-auto p-3 rounded-md bg-secondary-700 flex gap-2 md:gap-4 border-l-8 border-primary-500 items-center" >
                         <div className="w-[20%] max-w-[3.5rem]">
                             <img src={skill.icon} alt={skill.title + "icon"} className='w-full' />

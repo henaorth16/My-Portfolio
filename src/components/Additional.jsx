@@ -1,6 +1,6 @@
 import React from 'react'
 import "./About.css"
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { FaLightbulb } from "react-icons/fa";
@@ -42,7 +42,7 @@ function Additional() {
 <ol className="relative border-l border-secondary-200">
 
     <li className="ml-[2.4rem] md:ml[3rem] mt-8 my-2">
-      <Fade bottom>
+      <Fade>
         <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-secondary-800 rounded-full outline outline-secondary-300 outline-2 md:-left-6 -left-4 ">
         <MdAccessTimeFilled className='text-primary-500 text-2xl font-semibold'/>
         </span>
