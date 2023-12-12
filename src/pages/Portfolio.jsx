@@ -1,6 +1,37 @@
 import Image from "../assets/image/geez.png"
+import '../components/about.css'
 
 const Lists = [
+  {
+    imageUrl: Image,
+    title: "Ge'ez number converter",
+    description: "most developer uses vanilla javaScript to show their programming skill because, not using library or any framework is like a challenge for them!",
+    gitRepoLink: "https://github.com/henaorth16/Ge-ez-Number-Converter",
+    liveLink: "https://geezconverter.netlify.app",
+    skills: ["Html", "CSS", "javaScript"],
+    date: "sep-2023",
+    mainColor: 'dc2626'
+  },
+  {
+    imageUrl: Image,
+    title: "Ge'ez number converter",
+    description: "most developer uses vanilla javaScript to show their programming skill because, not using library or any framework is like a challenge for them!",
+    gitRepoLink: "https://github.com/henaorth16/Ge-ez-Number-Converter",
+    liveLink: "https://geezconverter.netlify.app",
+    skills: ["Html", "CSS", "javaScript"],
+    date: "sep-2023",
+    mainColor: 'dc2626'
+  },
+  {
+    imageUrl: Image,
+    title: "Ge'ez number converter",
+    description: "most developer uses vanilla javaScript to show their programming skill because, not using library or any framework is like a challenge for them!",
+    gitRepoLink: "https://github.com/henaorth16/Ge-ez-Number-Converter",
+    liveLink: "https://geezconverter.netlify.app",
+    skills: ["Html", "CSS", "javaScript"],
+    date: "sep-2023",
+    mainColor: 'dc2626'
+  },
   {
     imageUrl: Image,
     title: "Ge'ez number converter",
@@ -16,6 +47,7 @@ const Lists = [
 
 export default function Portfolio() {
   return <>
+  <div id="portfolio" className="h-[100vh] overflow-y-auto wrapper">
     <h1 className='text-primary-500 text-3xl text-center font-extrabold mt-20'>Projects</h1>
     <hr className='w-full my-4 text-secondary-500' />
 
@@ -61,6 +93,8 @@ export default function Portfolio() {
 
 
     </div>
+  </div>
+    
 
   </>
 

@@ -3,3 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.mobile-element{
+    background-color: #2f2f2f;
+    overflow-x: hidden;
+}
+
+.mobile-element > div {
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+  }

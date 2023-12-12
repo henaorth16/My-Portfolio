@@ -20,16 +20,16 @@ const About = () => {
   }, [currentIndex]);
 
   return (
-    <div className="text-secondary-300 w-full h-full flex flex-col items-center">
-      <div className=" relative  h-[3rem]  flex justify-center mt-20">
-        <h2 className="text-center sm:left-[50%] left-[-40%] translate-x-[-3rem] w-[100vw] md:w-[7rem] text-[2rem] font-semibold">I'm</h2>
-        {texts.map((text, index) => (
+    <div id="about" className="text-secondary-300 w-full h-full flex flex-col items-center">
+      <div className=" relative w-full  h-[2.6rem] mt-14 mb-16">
+        <h2 className="absolute left-[22%] sm:left-[40%] w-[100vw] md:w-[7rem] text-[2rem] font-semibold absolute ">I'm{texts.map((text, index) => (
         <span
           key={index}
-          className={`absolute font-black text-primary-500 about-text ${index === currentIndex ? "active" : ""}`}>
+          className={`absolute right-0 font-black text-primary-500 about-text ${index === currentIndex ? "active" : ""}`}>
           {text}
         </span>
-      ))}
+      ))}</h2>
+        
       </div>
 
       <div className="sm:px-10 px-3 w-full wrapper overflow-auto grid md:grid-cols-2 gap-5">
@@ -39,7 +39,7 @@ const About = () => {
         <Education /> {/* Education component*/}
         <Credential /> {/* Credentials component*/}
       </div>
-      <div className="md:my-2 my-1">E-mail me on <a className="text-primary-500 hover:text-primary-400" href="">emyayehenok@gmail.com</a></div>
+      <div className="md:my-2 my-1">E-mail me on <a className="text-primary-500 hover:text-primary-400" href="mailto:emyayehenok@gmail.com">emyayehenok@gmail.com</a></div>
     </div>
   );
 };
