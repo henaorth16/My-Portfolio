@@ -1,5 +1,4 @@
 import Image from "../assets/image/geez.png"
-import '../components/about.css'
 
 const Lists = [
   {

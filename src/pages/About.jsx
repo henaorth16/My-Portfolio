@@ -22,7 +22,7 @@ const About = () => {
   return (
     <div id="about" className="text-secondary-300 w-full h-full flex flex-col items-center">
       <div className=" relative w-full  h-[2.6rem] mt-14 mb-16">
-        <h2 className="absolute left-[22%] sm:left-[40%] w-[100vw] md:w-[7rem] text-[2rem] font-semibold absolute ">I'm{texts.map((text, index) => (
+        <h2 className="absolute left-[22%] sm:left-[40%] w-[100vw] md:w-[7rem] text-[2rem] font-semibold ">I'm{texts.map((text, index) => (
         <span
           key={index}
           className={`absolute right-0 font-black text-primary-500 about-text ${index === currentIndex ? "active" : ""}`}>

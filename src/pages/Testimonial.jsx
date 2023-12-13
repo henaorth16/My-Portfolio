@@ -1,5 +1,4 @@
 import Image from "../assets/image/geez.png"
-import '../components/About.css';
 import { FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 const Lists = [
