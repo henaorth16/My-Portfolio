@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.wrapper::-webkit-scrollbar{
+    display: none;
+   }
 
 .mobile-element{
     background-color: #2f2f2f;

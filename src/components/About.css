@@ -44,9 +44,7 @@
     }
   }
   
- .wrapper::-webkit-scrollbar{
-  display: none;
- }
+ 
  div.wrapper.testimony .image-wrapper::after{
   content: "";
   position: absolute;

@@ -56,7 +56,7 @@ function App() {
 
   return (
     <>
-      <div className='fixed top-3 right-3 z-100 w-[2.7rem] h-[2.7rem] flex flex-col justify-around'>
+      <div className='fixed top-3 right-3 z-[100] bg-[rgba(0,0,0,0.3)] px-2 w-[3.1rem] h-[2.7rem] flex flex-col justify-around'>
         <span className='h-1 w-full bg-secondary-300'></span>
         <span className='h-1 w-full bg-secondary-300'></span>
         <span className='h-1 w-full bg-secondary-300'></span>
@@ -68,7 +68,6 @@ function App() {
         <div className='px-[10px]'><Testimonial /></div>
         <div className='px-[10px]'><Contact /></div>
       </div>
-
     </>
   )
 }
