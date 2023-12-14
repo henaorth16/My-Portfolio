@@ -10,7 +10,7 @@
 
 .mobile-element{
     background-color: #2f2f2f;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .mobile-element > div {
