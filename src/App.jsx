@@ -7,6 +7,7 @@ import AnimatedCursor from "react-animated-cursor"
 import './App.css'
 import './index.css'
 import Loader from './components/Loader'
+import Nav from './components/Nav'
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -30,6 +31,7 @@ function App() {
   if (!isMobileDevice()) {
     return (
       <>
+
         <AnimatedCursor
           color="220,38,38"
           innerSize={8}
@@ -38,7 +40,7 @@ function App() {
           outerScale={1.5}
           outerStyle={{ mixBlendMode: 'difference' }}
           showSystemCursor={true}
-        />
+        /><Nav />
         <Suspense fallback={<Loader />}>
           <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation">
 
@@ -46,7 +48,7 @@ function App() {
             <div className='w-full h-[100vh] px-[7%] md:px[4rem]'><About /></div>
             <div className='w-full h-[100vh] px-[7%] md:px[4rem] overflow-y-auto' ><Portfolio /></div>
             <div className='w-full h-[100vh] px-[7%] md:px[4rem] overflow-y-auto'><Testimonial /></div>
-            <div className='w-full h-[100vh] px-[7%] md:px[4rem] overflow-y-auto'><Contact /></div>
+            <div id='contact' className='w-full h-[100vh] px-[7%] md:px[4rem] overflow-y-auto'><Contact /></div>
           </AwesomeSlider>
         </Suspense>
       </>
@@ -56,18 +58,17 @@ function App() {
 
   return (
     <>
-      <div className='fixed top-3 right-3 z-[100] bg-[rgba(0,0,0,0.3)] px-2 w-[3.1rem] h-[2.7rem] flex flex-col justify-around'>
-        <span className='h-1 w-full bg-secondary-300'></span>
-        <span className='h-1 w-full bg-secondary-300'></span>
-        <span className='h-1 w-full bg-secondary-300'></span>
-      </div>
-      <div className='w-full h-[100vh] flex mobile-element'>
-        <div><Home /></div>
-        <div><About /></div>
-        <div className='px-[10px]'><Portfolio /></div>
-        <div className='px-[10px]'><Testimonial /></div>
-        <div className='px-[10px]'><Contact /></div>
-      </div>
+      <Nav />
+      <Suspense fallback={<Loader />}>
+
+        <div className='w-full h-[100vh] flex mobile-element'>
+          <div><Home /></div>
+          <div><About /></div>
+          <div className='px-[10px]'><Portfolio /></div>
+          <div className='px-[10px]'><Testimonial /></div>
+          <div className='px-[10px]'><Contact /></div>
+        </div>
+      </Suspense>
     </>
   )
 }

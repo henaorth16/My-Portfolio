@@ -11,37 +11,6 @@ const Lists = [
     date: "sep-2023",
     mainColor: 'dc2626'
   },
-  {
-    imageUrl: Image,
-    title: "Ge'ez number converter",
-    description: "most developer uses vanilla javaScript to show their programming skill because, not using library or any framework is like a challenge for them!",
-    gitRepoLink: "https://github.com/henaorth16/Ge-ez-Number-Converter",
-    liveLink: "https://geezconverter.netlify.app",
-    skills: ["Html", "CSS", "javaScript"],
-    date: "sep-2023",
-    mainColor: 'dc2626'
-  },
-  {
-    imageUrl: Image,
-    title: "Ge'ez number converter",
-    description: "most developer uses vanilla javaScript to show their programming skill because, not using library or any framework is like a challenge for them!",
-    gitRepoLink: "https://github.com/henaorth16/Ge-ez-Number-Converter",
-    liveLink: "https://geezconverter.netlify.app",
-    skills: ["Html", "CSS", "javaScript"],
-    date: "sep-2023",
-    mainColor: 'dc2626'
-  },
-  {
-    imageUrl: Image,
-    title: "Ge'ez number converter",
-    description: "most developer uses vanilla javaScript to show their programming skill because, not using library or any framework is like a challenge for them!",
-    gitRepoLink: "https://github.com/henaorth16/Ge-ez-Number-Converter",
-    liveLink: "https://geezconverter.netlify.app",
-    skills: ["Html", "CSS", "javaScript"],
-    date: "sep-2023",
-    mainColor: 'dc2626'
-  },
-
 ]
 
 export default function Portfolio() {

@@ -10,7 +10,7 @@
 
 .mobile-element{
     background-color: #2f2f2f;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 .mobile-element > div {
@@ -18,3 +18,33 @@
     height: auto;
     flex: 0 0 auto; /* Prevent flex items from shrinking */
   }
+
+  #nav > .icon {
+    @apply fixed top-3 right-3 z-[100] bg-secondary-800 px-2 w-[3.1rem] h-[2.7rem] flex flex-col justify-around cursor-pointer hover:bg-secondary-700;
+    transition: transform 0.7s;
+  }
+
+
+#nav .links {
+    @apply bg-secondary-800 w-full h-full fixed top-0 z-[90] left-0 flex justify-center items-center ;
+}
+#nav > .links > ul{
+    @apply flex flex-col gap-16 opacity-0;
+    transform: scale(0.7);
+    animation: .5s collap forwards linear  ;
+}
+@keyframes collap {
+    100% {
+        @apply gap-0 opacity-100 scale-[1];
+    }
+}
+#nav > .links > ul > li {
+    @apply py-1 px-5 w-[14rem] flex justify-center items-center;
+}
+#nav > .links > ul > li:not(:first-child){
+    border-top: 2px solid rgba(255, 255, 255, 0.219)
+
+}
+#nav > .links > ul > li > a {
+    @apply p-3 px-5 hover:text-secondary-400 transition duration-500 text-xl font-bold font-heading w-full text-center h-full;
+}
