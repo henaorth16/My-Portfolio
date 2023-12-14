@@ -15,11 +15,11 @@ const Lists = [
 
 export default function Portfolio() {
   return <>
-  <div id="portfolio" className="h-[100vh] overflow-y-auto wrapper">
+  <div id="portfolio" className="h-[100vh] pb-24 overflow-y-auto wrapper">
     <h1 className='text-primary-500 text-3xl text-center font-extrabold mt-20'>Projects</h1>
     <hr className='w-full my-4 text-secondary-500' />
 
-    <div className='grid content-center md:grid-cols-2 items-center w-full md:px-8 gap-x-3'>
+    <div className='md:grid md:content-center md:grid-cols-2 items-center w-full md:px-8 px-3 md:gap-x-3'>
 
       {Lists.map((list, index) => (
         <div

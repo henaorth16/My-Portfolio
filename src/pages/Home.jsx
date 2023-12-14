@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 
 function Home() {
     return <>
-            <div className="text-secondary-200 text-center h-full w-full flex justify-center items-center">
+            <div id="home" className="text-secondary-200 text-center h-full w-full flex justify-center items-center">
                 <div className="flex flex-col justify-center items-center md:w-1/2 w-3/4 gap-3 font-par">
                     <Fade>
                         <div className="w-[10rem] h-[10rem] mb-6">

@@ -33,7 +33,7 @@ const Lists = [
 
 export default function Testimonial() {
   return <>
-  <div id="testimony" className="h-[100vh] wrapper overflow-y-auto">
+  <div id="testimony" className="h-[100vh] px-3 pb-24 wrapper overflow-y-auto">
     <h1 className='text-primary-500 text-3xl text-center font-semibold mt-20'>Testimonial</h1>
     <hr className='w-full my-4 text-secondary-500'/>
     <p className="text-secondary-300 my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptas praesentium sequi ex voluptates maiores quos quam dicta. Recusandae nam dolore excepturi libero necessitatibus sapiente voluptatibus iure alias omnis ad aspernatur veniam reprehenderit, dicta cupiditate nostrum?</p>

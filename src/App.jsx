@@ -64,9 +64,9 @@ function App() {
         <div className='w-full h-[100vh] flex mobile-element'>
           <div><Home /></div>
           <div><About /></div>
-          <div className='px-[10px]'><Portfolio /></div>
-          <div className='px-[10px]'><Testimonial /></div>
-          <div className='px-[10px]'><Contact /></div>
+          <div className=''><Portfolio /></div>
+          <div className=''><Testimonial /></div>
+          <div className=''><Contact /></div>
         </div>
       </Suspense>
     </>

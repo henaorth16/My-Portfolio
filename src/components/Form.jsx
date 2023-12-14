@@ -37,7 +37,7 @@ function Form() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className='w-[99%] md:w-[84%] m-auto bg-secondary-800 rounded-xl mt-7 py-7 px-3 flex flex-col items-center gap-2'>
+      <form onSubmit={handleSubmit} className='w-[99%] md:w-[84%] mx-auto bg-secondary-800 rounded-xl mt-7 py-7 px-3 flex flex-col justify-center items-center gap-2'>
         <div className='relative h-[2.3rem] w-full md:w-[30rem]  bg-secondary-800'>
           <input type="text" id='name' value={name} onChange={(e) => setName(e.target.value)} autoComplete='off' placeholder='Name' className='absolute contact-form top-1/2 placeholder:opacity-40 -translate-y-1/2 text-md focus:outline-none h-full z-0 w-full' required />
           <label htmlFor="name" className='absolute top-1/2 -translate-y-1/2 z-2 text-xl'><FaUser /></label>

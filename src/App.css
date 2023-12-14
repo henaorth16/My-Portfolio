@@ -30,6 +30,7 @@ div, p {
     border-bottom: 2px solid #dc2626;
     background-color: #1f1f1f;
 }
+
 .contact-form:focus ~ label, .contact-form:valid ~ label{
     color: #b32525;
 }

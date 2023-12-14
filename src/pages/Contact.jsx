@@ -4,7 +4,7 @@ import Form from '../components/Form'
 function Contact() {
   return (
     <>
-    <div id='contact' className='h-[100vh] wrapper overflow-y-auto'>
+    <div id='contact' className='h-[100vh] wrapper overflow-y-auto px-3'>
       <h1 className='text-primary-500 text-3xl text-center font-semibold mt-20'>Contact</h1>
       <hr className='w-full my-4 text-secondary-500' />
       <h2 className='text-center text-lg text-secondary-200'>Say hi on E-mail: <a href="mailto:emyayehenok@gmail.com" className='text-primary-500 pl-2'>emyayehenok@gmail.com</a></h2>
