@@ -1,5 +1,5 @@
 import React from 'react'
-import image from "../assets/image/certification.PNG"
+import image from "../assets/image/certificattion.PNG"
 
 function Credential() {
   return (
@@ -10,9 +10,9 @@ function Credential() {
             <div className='flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4'>
                 <img className='absolute inset-0 w-full h-full object-cover object-top z-0' src={image} />
                   <div className='absolute px-4 opacity-100 sm:opacity-0 hover:opacity-100 transition-all duration-700 z-10 text-white bg-[#000000cc] w-full h-full inset-0'>
-                    <h2 className='text-xl text-center font-bold mb-4'>Javascript Datastructure and Algorithm</h2>
+                    <h2 className='text-xl text-center font-bold mb-4'>Responsive Web Design</h2>
                     <h4 className='text-sm text-primary-600 text-center font-light mb-2'>Free Code Camp</h4>
-                    <p className='leading-shrink'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dicta repudiandae nostrum quos exercitationem fugiat vitae iusto voluptas est sequi?</p>
+                    <p className='leading-shrink'>I got many priceless skill through each learning process. Thanks for Free Code Code</p>
                     <div className=' my-4 w-full text-right '>
                     <a href='#' className=' bg-primary-600 hover:bg-primary-800 px-6 py-2 rounded-full mt-[1rem]'>Checkout</a>
                     </div>
