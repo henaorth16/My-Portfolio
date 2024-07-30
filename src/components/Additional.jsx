@@ -4,33 +4,23 @@ import { Fade } from "react-awesome-reveal";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { FaLightbulb } from "react-icons/fa";
-// const additional = [
-//   {
-//     icon:"",
-//     header: "",
-//     desc: ""
-//   },
-//   {
-//     icon:"",
-//     header: "",
-//     desc: ""
-//   },
-//   {
-//     icon:"",
-//     header: "",
-//     desc: ""
-//   },
-//   {
-//     icon:"",
-//     header: "",
-//     desc: ""
-//   },
-//   {
-//     icon:"",
-//     header: "",
-//     desc: ""
-//   },
-// ]
+const additionals = [
+  {
+    icon:FaLightbulb,
+    header: "lorem ipsum the",
+    desc: "lorem ipsum eihd io ndhum shuwe sjaid woamn aihf kdofj "
+  },
+  {
+    icon:MdAccessTimeFilled,
+    header: "lorem ipsum the",
+    desc: "lorem ipsum eihd io ndhum shuwe sjaid woamn aihf kdofj "
+  },
+  {
+    icon:HiMiniUserGroup,
+    header: "lorem ipsum the",
+    desc: "lorem ipsum eihd io ndhum shuwe sjaid woamn aihf kdofj "
+  },
+]
 
 function Additional() {
   return (
@@ -40,43 +30,22 @@ function Additional() {
       <div className='sm:mx-0 md:mx-5 mx-2'>
 
         <ol className="relative border-l border-secondary-200">
-
-          <li className="ml-[1.6rem] md:ml[3rem] mt-6 my-2">
-            <Fade>
-              <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-secondary-800 rounded-full outline outline-secondary-300 outline-2 md:-left-6 -left-4 ">
-                <MdAccessTimeFilled className='text-primary-500 text-2xl font-semibold' />
-              </span>
-              <h3 className="mb-1 text-xl font-semibold text-secondary-200">Lorem, ipsum dolor.</h3>
-              <p className="text-base font-normal text-secondary-300">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, maxime?</p>
-            </Fade>
-          </li>
-
-
-
-          <li className="ml-[1.6rem] md:ml[3rem] mt-6 my-2">
-            <Fade bottom>
-              <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-secondary-800 rounded-full outline outline-secondary-300 outline-2 md:-left-6 -left-4 ">
-                <HiMiniUserGroup className='text-primary-500 text-2xl font-semibold' />
-              </span>
-              <h3 className="mb-1 text-xl font-semibold text-secondary-200">kdnn  dn dd </h3>
-              <p className="text-base font-normal text-secondary-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis temporibus voluptas at reprehenderit vel officiis sint quod ut asperiores ad.</p>
-            </Fade>
-          </li>
-
-          <li className="ml-[1.6rem] md:ml[3rem] mt-6 my-2">
-            <Fade bottom>
-              <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-secondary-800 rounded-full outline outline-secondary-300 outline-2 md:-left-6 -left-4 ">
-                <FaLightbulb className='text-primary-500 text-2xl font-semibold' />
-              </span>
-              <h3 className="mb-1 text-xl font-semibold text-secondary-200"> Lorem, ipsum dolor.</h3>
-              <p className="text-base font-normal text-secondary-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis temporibus voluptas at reprehenderit vel officiis sint quod ut asperiores ad.</p>
-            </Fade>
-          </li>
+          {additionals.map((item, index) => (
+              <li className="ml-[1.6rem] md:ml-[3rem] mt-[2rem] my-2" key={index}>
+                <Fade>
+                  <span className="absolute flex items-center  justify-center md:w-12 md:h-12 w-8 h-8 bg-secondary-800 rounded-full outline outline-secondary-300 outline-2 md:-left-6 -left-4 ">
+                  {<item.icon className='text-primary-500 text-2xl font-semibold' />}
+                  </span>
+                  <h3 className="mb-1 text-xl font-semibold text-secondary-200">{item.title}</h3>
+                  <p className="text-base font-normal text-secondary-300">{item.desc}</p>
+                </Fade>
+              </li>
+          ))}
         </ol>
 
       </div>
     </div>
-  )
+  );
 }
 
 export default Additional
