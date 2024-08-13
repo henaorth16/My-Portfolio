@@ -1,13 +1,11 @@
 import React from "react";
 import imgds from "../assets/image/dsajs.png"
 import imght from "../assets/image/htmlcss.png"
+import Title from "./Title";
 function Credential() {
     return (
         <div className=" bg-secondary-800 text-secondary-200 py-5 px-7 col-span-2 md:px-7 lg:px-9 rounded-xl">
-            <h2 className="m-2 ml-[10%] text-2xl text-primary-500 font-bold">
-                Certificate And Credentials
-            </h2>
-            <hr className="w-[80%] mx-auto mb-6" />
+            <Title title="Certificate And Credentials"/>
             <div className="flex flex-wrap justify-center gap-4 w-full ">
                 <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
                     <img

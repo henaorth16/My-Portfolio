@@ -55,13 +55,13 @@ export default function Testimonial() {
             </p>
           </div>
              <div className="absolute w-full bottom-0 h-[7rem] bg-gradient-to-b from-[#00000000] to-secondary-950"></div>
-          <div className="sticky bottom-0 w-full bg-[#242424] px-6  z-20">
-            {list.instaLink === "" ? (
+          <div className="sticky bottom-0 w-full bg-secondary-800 px-6  z-20">
+            {list.instaLink.length === 0 ? (
                ""
               ):(
                 <a className="inline-block opacity-80 hover:opacity-100 mx-1 p-1 pt-2 text-3xl  text-primary-600" href={list.instaLink}><RiInstagramFill /></a>
             )}
-            {list.linkedLink === "" ? (
+            {list.linkedLink.length === 0 ? (
                ""
               ):(
                 <a className="inline-block opacity-80 hover:opacity-100 mx-1 p-1 pt-2 text-3xl  text-primary-600" href={list.linkedLink}><FaLinkedin /></a>

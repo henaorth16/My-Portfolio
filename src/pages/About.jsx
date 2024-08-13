@@ -6,7 +6,7 @@ import Additional from "../components/Additional";
 import Credential from "../components/Credential";
 import Me from "../components/Me";
 
-const texts = ["Developer", "Designer", "Freelancer"];
+const texts = ["Developer", "Programmer", "Freelancer"];
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

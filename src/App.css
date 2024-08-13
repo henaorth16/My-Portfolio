@@ -1,5 +1,5 @@
 .App{
-    --primary-clr: rgb(206, 179, 24);
+    --primary-clr: rgb(206, 24, 24);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -13,6 +13,8 @@ div, p {
     font-family: Lato, sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .contact-form{

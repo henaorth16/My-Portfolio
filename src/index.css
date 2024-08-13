@@ -8,6 +8,10 @@
     display: none;
    }
 
+
+.awssld__content{
+    background-color: #141414;
+}
 .mobile-element{
     background-color: #2f2f2f;
     overflow-x: hidden;

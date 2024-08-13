@@ -21,12 +21,6 @@ function App() {
     return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   };
 
-  // Function to handle navigation
-  const handleNavigation = () => {
-    // Your navigation logic here
-    console.log('Navigate to the selected section');
-  };
-
 
   if (!isMobileDevice()) {
     return (
@@ -40,9 +34,9 @@ function App() {
           outerScale={1.5}
           outerStyle={{ mixBlendMode: 'difference' }}
           showSystemCursor={true}
-        /><Nav />
+        />
         <Suspense fallback={<Loader />}>
-          <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation">
+          <AwesomeSlider bullets={false} fillParent={true} animation="openAnimation" mobileTouch={false} className='bg-secondary-800' fill="">
 
             <div className='w-full h-[100vh]'><Home /></div>
             <div className='w-full h-[100vh] px-[7%] md:px[4rem]'><About /></div>

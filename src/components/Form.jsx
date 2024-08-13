@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser';
 import { FaUser } from 'react-icons/fa6'
 import { GrMail } from "react-icons/gr";
@@ -8,6 +8,8 @@ function Form() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [success, setSuccess] = useState(false)
+  const [successMessage, setSuccessMessage] = useState("sent!")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,11 +31,17 @@ function Form() {
         setName('')
         setEmail('')
         setMessage('')
+        setSuccess(true)
       })
       .catch((error) => {
         console.log(error + "occored");
       })
   }
+useEffect(()=>{
+  setTimeout(()=>{
+    setSuccess(false)
+  },2000)
+},[success])
 
   return (
     <>
@@ -52,8 +60,8 @@ function Form() {
         </div>
         <div className='md:w-[30rem] mx-auto text-right'>
         <button type="submit" className="inline-flex items-center px-4 py-1 font-medium text-secondary-200 mt-3 bg-primary-400 text-lg rounded-md hover:bg-primary-500 focus:border">Submit</button>
-
         </div>
+        {successMessage && success && <p className='text-2xl text-[#00ff00]'>{successMessage}</p>}
       </form>
     </>
 
