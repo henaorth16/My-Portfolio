@@ -2,13 +2,14 @@ import React from "react";
 import imgds from "../assets/image/dsajs.png"
 import imght from "../assets/image/htmlcss.png"
 import Title from "./Title";
+import { Img } from "react-image";
 function Credential() {
     return (
         <div className=" bg-secondary-800 text-secondary-200 py-5 px-7 col-span-2 md:px-7 lg:px-9 rounded-xl">
             <Title title="Certificate And Credentials"/>
             <div className="flex flex-wrap justify-center gap-4 w-full ">
                 <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
-                    <img
+                    <Img
                         className="absolute inset-0 w-full h-full object-cover object-top z-0"
                         src={imgds}
                         alt="certificate image"
@@ -34,7 +35,7 @@ function Credential() {
                     </div>
                 </div>
                 <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
-                    <img
+                    <Img
                         className="absolute inset-0 w-full h-full object-cover object-top z-0"
                         src={imght}
                         alt="html css certificate"

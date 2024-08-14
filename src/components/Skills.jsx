@@ -2,6 +2,7 @@ import React from 'react'
 import { Fade } from "react-awesome-reveal";
 import './skill.css'
 import Title from './Title';
+import { Img } from 'react-image';
 
 const skills = [
     {
@@ -60,7 +61,7 @@ function Skills() {
                     <Fade>
                         <div className="min-h-[4.4em] p-3 rounded-md bg-secondary-700 flex gap-2 md:gap-4 border-l-8 border-primary-500 items-center" >
                             <div className="w-[20%] max-w-[3.5rem]">
-                                <img src={skill.icon} loading='lazy' alt={skill.title} className='w-full' />
+                                <Img src={skill.icon} loading='lazy' alt={skill.title} className='w-full' />
                             </div>
                             <div className="flex flex-col justify-between w-[9rem]">
                                 <h1 className='mb-1 text-xl font-semi-bold spacing-1'>{skill.title}</h1>

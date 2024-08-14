@@ -1,6 +1,7 @@
 import Image from "../assets/image/geez.png"
 import { FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { Img } from "react-image";
 const Lists = [
   {
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh6fFdN_9mpfYZ_v5BvOxvni4UMt2n-ly5wg&usqp=CAU",
@@ -42,7 +43,7 @@ export default function Testimonial() {
       {Lists.map((list, index) => (
         <div className={`relative wrapper testimony bg-secondary-800 z-0 pt-4 mb-6 max-w-sm w-auto mx-auto rounded-md overflow-y-hidden shadow-lg max-h-[27rem]`} key={index + 1}        >
           <div className=' image-wrapper relative w-full group overflow-visible flex px-5 gap-3'>
-            <img className=" relative z-0 h-[6rem] w-[6rem] rounded-lg object-cover" loading="lazy" src={list.imageUrl} alt={list.title} />
+            <Img className=" relative z-0 h-[6rem] w-[6rem] rounded-lg object-cover" loading="lazy" src={list.imageUrl} alt={list.title} />
             <div className=" flex-1 text-left">
               <h1 className="font-bold text-[1.29rem] text-secondary-200 mb-2">{list.name}</h1>
               <p className="text-primary-400 text-sm">{list.work}</p>

@@ -1,3 +1,4 @@
+import { Img } from "react-image"
 import Image from "../assets/image/geez.png"
 
 const Lists = [
@@ -28,7 +29,7 @@ export default function Portfolio() {
           style={{ backgroundColor: `#${list.mainColor}` }}
         >
           <div className='relative min-h-[13rem] w-full group overflow-hidden'>
-            <img className="absolute z-0 h-full w-full object-cover" src={list.imageUrl} alt={list.title} />
+            <Img className="absolute z-0 h-full w-full object-cover" src={list.imageUrl} alt={list.title} />
             <div className='absolute z-4 text-secondary-300 bottom-3 right-2'>{list.date}</div>
             <div className="absolute w-full z-10 md:bg-secondary-900 md:top-full gap-4 md:transition-[top] md:duration-[700ms] group-hover:top-0 h-full flex justify-center items-center">
               {list.liveLink === "" ? (
