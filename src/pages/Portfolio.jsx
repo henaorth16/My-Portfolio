@@ -24,7 +24,7 @@ export default function Portfolio() {
 
       {Lists.map((list, index) => (
         <div
-          className={`opacity-80 hover:opacity-100 mb-6 max-w-sm w-auto mx-auto rounded-md overflow-hidden shadow-lg`}
+          className={`md:opacity-80 hover:opacity-100 mb-6 max-w-sm w-auto mx-auto rounded-md overflow-hidden shadow-lg`}
           key={index + 1}
           style={{ backgroundColor: `#${list.mainColor}` }}
         >
