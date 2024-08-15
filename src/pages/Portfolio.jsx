@@ -42,7 +42,7 @@ export default function Portfolio() {
     <h1 className='text-primary-500 text-3xl text-center font-extrabold mt-20'>Projects</h1>
     <hr className='w-full my-4 text-secondary-500' />
 
-    <div className='grid content-center md:grid-cols-2 items-center w-[fit-content] mx-auto md:px-8 md:gap-8 lg:gap-x-24 mt-12'>
+    <div className='grid content-center md:grid-cols-2 items-center w-[fit-content] mx-auto md:px-8 md:gap-8 gap-6 lg:gap-x-24 mt-12'>
 
       {Lists.map((list, index) => (
         <div
