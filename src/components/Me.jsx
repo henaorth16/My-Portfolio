@@ -18,7 +18,7 @@ function Me() {
   return (
     <div className='bg-secondary-800 text-secondary-300 group py-5 px-7 col-span-2 md:px-10 rounded-xl'>
       <Title title="About Me"/>
-      <p className='my-3 leading-relaxed text-lg group:focus:text-200 text-justify px-6'>{showFullText && fulltext.split(' ').length > 25 ? fulltext : `${slicedText}...`}
+      <p className='my-3 md:leading-relaxed text-lg group:focus:text-200 text-justify md:px-6'>{showFullText && fulltext.split(' ').length > 25 ? fulltext : `${slicedText}...`}
         <button className='text-primary-600 ml-2' onClick={() => setShowFullText(!showFullText)}>
           {showFullText ? "Less" : "More"}
         </button>
