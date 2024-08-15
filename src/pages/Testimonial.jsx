@@ -38,7 +38,7 @@ export default function Testimonial() {
     <h1 className='text-primary-500 text-3xl text-center font-semibold mt-20'>Testimonial</h1>
     <hr className='w-full my-4 text-secondary-500'/>
     <p className="text-secondary-300 my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptas praesentium sequi ex voluptates maiores quos quam dicta. Recusandae nam dolore excepturi libero necessitatibus sapiente voluptatibus iure alias omnis ad aspernatur veniam reprehenderit, dicta cupiditate nostrum?</p>
-    <div className='grid content-center md:grid-cols-2 items-center w-[fit-content] mx-auto md:px-8 md:gap-8'>
+    <div className='grid content-center md:grid-cols-2 items-center w-[fit-content] mx-auto md:px-8 md:gap-8 lg:gap-x-24'>
 
       {Lists.map((list, index) => (
         <div className={`relative wrapper testimony bg-secondary-800 z-0 pt-4 mb-6 max-w-sm w-auto mx-auto rounded-md overflow-y-hidden shadow-lg max-h-[27rem]`} key={index + 1}        >
