@@ -9,5 +9,9 @@ const Title = ({title}) => {
     </>
   )
 }
-
+export function MainParagraph({text}) {
+  return <p className="text-secondary-300 my-6 lg:px-[10%]">
+    {text}
+  </p>
+}
 export default Title

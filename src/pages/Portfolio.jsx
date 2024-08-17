@@ -2,6 +2,7 @@ import { Img } from "react-image"
 import imgGeez from "../assets/image/geez.png"
 import imgTour from "../assets/image/tour.png"
 import imgComp from "../assets/image/complain.png"
+import { MainParagraph } from "../components/Title"
 
 const Lists = [
   {
@@ -41,12 +42,12 @@ export default function Portfolio() {
   <div id="portfolio" className="h-[100vh] pb-24 overflow-y-auto wrapper">
     <h1 className='text-primary-500 text-3xl text-center font-extrabold mt-20'>Projects</h1>
     <hr className='w-full my-4 text-secondary-500' />
-
+    <MainParagraph text="Explore some of the projects I've worked on! mostly from frontend development and some full-stack applications, each project showcases my skills and passion for creating intuitive and user-friendly experiences. Click on 'see on Github' button to learn more about the process and technologies used."/>
     <div className='grid content-center md:grid-cols-2 items-center w-[fit-content] mx-auto md:px-8 md:gap-8 gap-6 lg:gap-x-24 mt-12'>
 
       {Lists.map((list, index) => (
         <div
-          className={`md:opacity-[.88] h-full hover:opacity-100 mb-6 max-w-sm w-auto mx-auto rounded-md overflow-hidden`}
+          className={`md:opacity-[.88] h-full hover:opacity-100 max-w-sm w-auto mx-auto rounded-md overflow-hidden`}
           key={index + 1}
           style={{ backgroundColor:`hsl(${list.mainColor}, 80%, 30%)`}}
         >
