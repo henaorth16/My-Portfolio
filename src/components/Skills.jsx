@@ -28,26 +28,26 @@ const skills = [
     {
         title: "Tailwind",
         icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png",
-        progValue: 82
+        progValue: 94
     },
     {
         title: "Nextjs",
         icon: "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png",
-        progValue: 75
+        progValue: 80
     },
     {
         title: "Typescript",
         icon: "https://w7.pngwing.com/pngs/74/362/png-transparent-typescript-plain-logo-icon-thumbnail.png",
-        progValue: 72
+        progValue: 75
     },
     {
         title: "Shadcn ui",
         icon: "https://seeklogo.com/images/S/shadcn-ui-logo-EF735EC0E5-seeklogo.com.png?v=638421451470000000",
-        progValue: 72
+        progValue: 82
     },
     {
-        title: "Astro js",
-        icon: "https://astro.js.org/astro.png",
+        title: "Mysql db",
+        icon: "https://w7.pngwing.com/pngs/385/582/png-transparent-mysql-workbench-macos-bigsur-icon-thumbnail.png",
         progValue: 65
     },
 ]
