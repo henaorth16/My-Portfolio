@@ -20,7 +20,7 @@ const Lists = [
     title: "Complaint Management",
     description: "This full-stack project highlights my Next.js expertise. Feel free to explore the detailed repo—contributions are always welcome!",
     gitRepoLink: "https://github.com/henaorth16/nextjs-complaint-system/",
-    liveLink: "https://nextjs-complaint-system-lf78kybrl-henoks-projects-67003898.vercel.app/",
+    liveLink: "https://nextjs-complaint-system.vercel.app/",
     skills: ["NextJs", "Prisma", "TypeScript", "shadcn"],
     date: "jun-2024",
     mainColor: '49'
