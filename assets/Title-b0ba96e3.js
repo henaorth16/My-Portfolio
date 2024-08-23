@@ -1,0 +1,1 @@
+import{j as t}from"./index-2dd6c88b.js";const s=({title:a})=>t.jsxs(t.Fragment,{children:[t.jsx("h2",{className:"m-2 ml-[10%] text-2xl text-primary-500 font-bold",children:a}),t.jsx("hr",{className:"w-[80%] mx-auto mb-6 opacity-30"})]});function e({text:a}){return t.jsx("p",{className:"text-secondary-300 my-6 lg:px-[10%]",children:a})}export{e as M,s as T};
