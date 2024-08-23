@@ -5,12 +5,12 @@ import { Img } from "react-image";
 import { MainParagraph } from "../components/Title";
 const Lists = [
   {
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMsHSXcrMzdwbug3zRELRyei2WPIFizShG8w&s",
+    imageUrl: "https://avatars.githubusercontent.com/u/98223438?v=4",
     name: "Leul Dereje",
     work: "Sofware developer, Digital Creator",
     description: "W've had the privilege of collaborating closely with Henok in the realm of web development, and it's been nothing short of inspiring. He possesses an unparalleled dedication that not only ensures projects are completed on time but also guarantees a level of quality that is truly commendable. What sets He apart is his extraordinary ability to breathe life into designs, converting even the most intricate UI designs into stunning, functional websites. What's more impressive is his knack for delivering unique results—each project he works on is a testament to his creativity, with no duplicates anywhere. However, beyond his technical prowess lies his remarkable interpersonal skills. Henok is adept at collaborating with diverse teams, fostering a peaceful and collaborative environment. This not only ensures a smooth workflow but also adds a layer of innovation stemming from collective creativity. His portfolio speaks volumes about his commitment to excellence and his capacity to turn visions into reality. Collaborating with Henok has been an enriching experience, and I have no doubt that he will continue to push boundaries and leave an indelible mark in the world of web development.",
-    instaLink: "http://www.facebook.com",
-    linkedLink:"http://www.instagram.com"
+    instaLink: "",
+    linkedLink:"https://www.linkedin.com/in/leul-dereje-0a0862224/"
   },
   {
     imageUrl: "https://media.licdn.com/dms/image/v2/D4E03AQFRHK0b6ER6sA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1704396561318?e=1729728000&v=beta&t=fBfJmDIxAtgHFR_gJl5W1VmCBkuR-BKMFob9zoAUzaM",
