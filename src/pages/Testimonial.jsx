@@ -17,7 +17,7 @@ const Lists = [
     name: "Ezra mamo",
     work: "Cofounder of Bluenile It Solution",
     description: "I have worked with Henok Emeyaye on previous projects, he is well-versed with his skills and a good person to collaborate with.",
-    instaLink: "http://www.instagram.com",
+    instaLink: "https://instagram.com/ezolbest",
     linkedLink:"https://www.linkedin.com/in/ezra-mamo-09201022b/"
   },
   {
