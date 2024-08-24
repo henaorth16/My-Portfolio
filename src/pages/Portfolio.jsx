@@ -2,6 +2,7 @@ import { Img } from "react-image"
 import imgGeez from "../assets/image/geez.png"
 import imgTour from "../assets/image/tour.png"
 import imgComp from "../assets/image/complain.png"
+import imgAmazing from "../assets/image/amazing.png"
 import { MainParagraph } from "../components/Title"
 
 const Lists = [
@@ -34,6 +35,16 @@ const Lists = [
     skills: ["React", "Tailwind", "javaScript"],
     date: "jul-2023",
     mainColor: '165'
+  },
+  {
+    imageUrl: imgAmazing,
+    title: "Amazing gear Game",
+    description: "Javascript game clonning project | For pc users | It helps me to develop my programming skill",
+    gitRepoLink: "https://github.com/henaorth16/Amazing-Gear",
+    liveLink: "https://amazing-gear.netlify.app/",
+    skills: ["javascript", "canvas"],
+    date: "Dec-2023",
+    mainColor: '155'
   },
 ]
 
