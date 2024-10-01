@@ -12,7 +12,7 @@ function Credential() {
                     <Img
                         className="absolute inset-0 w-full h-full object-cover object-top z-0"
                         src={imgds}
-                        alt="certificate image"
+                        alt="Certificate image"
                     />
                     <div className="absolute px-4 opacity-100 sm:opacity-0 hover:opacity-100 transition-all duration-700 z-10 text-white bg-[#000000cc] w-full h-full inset-0">
                         <h2 className="text-xl text-center font-bold mb-2">
