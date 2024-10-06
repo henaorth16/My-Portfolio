@@ -1,7 +1,7 @@
 import React from "react";
 import imgds from "../assets/image/dsajs.png"
 import imght from "../assets/image/htmlcss.png"
-import imgcpp from "../assets/image/imgcpp.png"
+import imgcpp from "../assets/image/imgcpp.jpg"
 import Title from "./Title";
 import { Img } from "react-image";
 function Credential() {
