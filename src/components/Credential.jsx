@@ -1,6 +1,7 @@
 import React from "react";
 import imgds from "../assets/image/dsajs.png"
 import imght from "../assets/image/htmlcss.png"
+import imgcpp from "../assets/image/imgcpp.png"
 import Title from "./Title";
 import { Img } from "react-image";
 function Credential() {
@@ -60,7 +61,32 @@ function Credential() {
                         </div>
                     </div>
                 </div>
-                <div></div>
+                <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
+                    <Img
+                        className="absolute inset-0 w-full h-full object-cover object-top z-0"
+                        src={imgcpp}
+                        alt="c++ certificate"
+                    />
+                    <div className="absolute px-4 opacity-100 sm:opacity-0 hover:opacity-100 transition-all duration-700 z-10 text-white bg-[#000000cc] w-full h-full inset-0">
+                        <h2 className="text-xl text-center font-bold mb-2">
+                            C++ Training Crash Course
+                        </h2>
+                        <h4 className="text-sm text-primary-600 text-center font-light mb-1">
+                            Udemy
+                        </h4>
+                        <p className="leading-tight text-[0.93]">
+                        This course focused on special behavior of C++. and algorithm scripting using c++.
+                        </p>
+                        <div className=" my-4 w-full text-right ">
+                            <a
+                                href="https://www.udemy.com/certificate/UC-b886a8df-9a76-4030-aa09-49e9c7b0cb28/"
+                                className=" bg-primary-600 hover:bg-primary-800 px-6 py-2 rounded-full mt-[1rem]"
+                            >
+                                Checkout
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
