@@ -12,7 +12,7 @@ const skills = [
     },
     {
         title: "CSS",
-        icon: "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png",
+        icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDh1mpHfcmN-T76dgAswiKqbPsd6hDVbZ3g&s",
         progValue: 96
     },
     {
