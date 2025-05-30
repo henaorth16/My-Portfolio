@@ -10,7 +10,7 @@ const Lists = [
   {
     imageUrl: churchFeast,
     title: "Church and Feasts",
-    description: "This full-stack project is a simple church calendar that shows the Ethiopian Orthodox Church's feasts and fasts. It is built with Nextjs, prisma, and Typescript basically.",
+    description: "This full-stack project is a developed to help Orthodox community. by showing the Ethiopian Orthodox Church, celebrating feasts including integrated map.",
     gitRepoLink: "https://github.com/henaorth16/church-and-feasts",
     liveLink: "https://church-and-feasts.vercel.app",
     skills: ["NextJs", "Prisma", "TypeScript", "shadcn"],
