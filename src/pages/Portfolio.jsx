@@ -3,9 +3,20 @@ import imgGeez from "../assets/image/geez.png"
 import imgTour from "../assets/image/tour.png"
 import imgComp from "../assets/image/complain.png"
 import imgAmazing from "../assets/image/amazing.png"
+import churchFeast from "../assets/image/churchFeast.png"
 import { MainParagraph } from "../components/Title"
 
 const Lists = [
+  {
+    imageUrl: churchFeast,
+    title: "Church and Feasts",
+    description: "This full-stack project is a simple church calendar that shows the Ethiopian Orthodox Church's feasts and fasts. It is built with Nextjs, prisma, and Typescript basically.",
+    gitRepoLink: "https://github.com/henaorth16/church-and-feasts",
+    liveLink: "https://church-and-feasts.vercel.app",
+    skills: ["NextJs", "Prisma", "TypeScript", "shadcn"],
+    date: "may-2025",
+    mainColor: '288' //hue value for hsl
+  },
   {
     imageUrl: imgGeez,
     title: "Ge'ez number converter",
