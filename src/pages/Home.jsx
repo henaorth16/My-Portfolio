@@ -15,7 +15,7 @@ function Home() {
                 <Fade>
                     <h2 className="text-xl font-bold tracking-wider text-secondary-500">👋Hello, Here is <Fade><span className="text-primary-500 text-[1.4rem] font-heading font-bold">HENOK EMYAYE</span></Fade>  </h2>
                 </Fade>
-                    <p>Frontend, Problem Solving, Collaboration with other, JavaScript, Reactjs, Nextjs, TypeScript</p>
+                    <p>Full-stack, Front-end, Problem Solving, Collaboration, TypeScript, Reactjs, Nextjs, expressjs</p>
                 <div className="text-secondary-400 text-sm md:text-base flex gap-3">
                     <a href="https://drive.google.com/file/d/1AlFVg32EF30vwmE7GKqfD1MpwWHK4keT/view?usp=drivesdk" target="_blank" className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-950 rounded-md hover:bg-opacity-50  focus:z-10 focus:ring-1 focus:outline-none">
                         <svg className="w-5 h-5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#dc2626" viewBox="0 0 20 20">
