@@ -4,13 +4,13 @@ import imgTour from "../assets/image/tour.png"
 import imgComp from "../assets/image/complain.png"
 import imgAmazing from "../assets/image/amazing.png"
 import churchFeast from "../assets/image/churchFeast.png"
-import { MainParagraph } from "../components/Title"
+import { MainParagraph, MainTitle } from "../components/Title"
 
 const Lists = [
   {
     imageUrl: churchFeast,
     title: "Church and Feasts",
-    description: "This full-stack project is a developed to help Orthodox community. by showing the Ethiopian Orthodox Church, celebrating feasts including integrated map.",
+    description: "This full-stack project is a developed to help Orthodox community. by showing the Ethiopian Orthodox Churches, celebrating feasts including integrated map.",
     gitRepoLink: "https://github.com/henaorth16/church-and-feasts",
     liveLink: "https://church-and-feasts.vercel.app",
     skills: ["NextJs", "Prisma", "TypeScript", "shadcn"],
@@ -62,14 +62,14 @@ const Lists = [
 export default function Portfolio() {
   return <>
   <div id="portfolio" className="h-[100vh] pb-24 overflow-y-auto wrapper">
-    <h1 className='text-primary-500 text-3xl text-center font-extrabold mt-20'>Projects</h1>
+    <MainTitle title="Portfolio"/>
     <hr className='w-full my-4 text-secondary-500' />
     <MainParagraph text="Explore some of the projects I've worked on! mostly from frontend development and some full-stack applications, each project showcases my skills and passion for creating intuitive and user-friendly experiences. Click on 'see on Github' button to learn more about the process and technologies used."/>
     <div className='grid content-center md:grid-cols-2 items-center w-[fit-content] mx-auto md:px-8 md:gap-8 gap-6 lg:gap-x-24 mt-12'>
 
       {Lists.map((list, index) => (
         <div
-          className={`md:opacity-[.88] h-full hover:opacity-100 max-w-sm w-auto mx-auto rounded-md overflow-hidden`}
+          className={`md:opacity-[.88] h-full hover:opacity-100 hover:scale-[1.04] transition-transform max-w-sm w-auto mx-auto rounded-md overflow-hidden`}
           key={index + 1}
           style={{ backgroundColor:`hsl(${list.mainColor}, 80%, 30%)`}}
         >
@@ -95,9 +95,9 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="px-6 pt-4 pb-2 text-sm flex">
+          <div className="px-3 pt-4 pb-1 text-sm flex justify-center flex-wrap gap-1 items-baseline">
             {list.skills.map((skill, skillIndex) => (
-              <span key={skillIndex} className="inline-block bg-secondary-100 opacity-60 rounded-full px-3 py-1 text-xs font-semibold text-secondary-800 mr-2 mb-2">
+              <span key={skillIndex} className="inline-block bg-secondary-100 opacity-60 rounded-full px-2 py-1 text-xs font-semibold text-secondary-800  mb-2">
                 {`#${skill}`}
               </span>
             ))}

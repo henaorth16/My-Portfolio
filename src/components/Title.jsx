@@ -14,4 +14,8 @@ export function MainParagraph({text}) {
     {text}
   </p>
 }
+export function MainTitle({title}) {
+  return <h1 className='text-primary-500 text-3xl text-center font-semibold mt-20'>{title}</h1>
+    
+}
 export default Title
