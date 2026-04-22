@@ -2,15 +2,9 @@ import React, { useState } from 'react'
 import Title from './Title';
 
 function Me() {
-  const fulltext = `My name is Henok, a self-taught frontend website developer with a burning passion for transforming intricate designs into beautiful, functional code. With over two years of experience in the field, I've honed my skills in HTML, CSS, and JavaScript, making me adept at crafting user-friendly and visually appealing websites.
-
-  During my journey, I've delved into popular CSS frameworks like Bootstrap, Tailwind CSS, and Material UI, enhancing my ability to create responsive, eye-catching layouts. Moreover, I'm well-versed in React.js, a leading frontend framework, which empowers me to build dynamic and interactive web applications for JavaScript enthusiasts.
-  
-  Being a perpetual learner, I relish embracing new challenges and staying updated with the latest industry trends. My curiosity drives me to seek innovative solutions and keeps my skill set fresh.
-  
-  In addition to my technical proficiency, I pride myself on effective communication and collaboration. As an Ethiopian developer, I bring a unique perspective and cultural diversity to my work, enriching the projects I engage with.
-  
-  Currently, I'm freelancing on platforms like Upwork, where I bring my expertise to clients worldwide. My goal is to continue crafting remarkable websites and applications, showcasing the fusion of my skills and creative vision. Welcome to my portfolio, a testament to my dedication to the world of web development.`
+  const fulltext = `My name is Henok, a self-taught full-stack developer with over three years of experience, primarily focused on frontend development. I specialize in building responsive, high-performance web applications using Next.js, React.js, HTML, CSS, and JavaScript, with strong attention to clean UI/UX and performance.
+On the frontend, I’m experienced with Tailwind CSS, Shadcn Ui, and Material UI for creating modern, scalable interfaces. On the backend, I work with Node.js frameworks like Express.js and NestJS to build reliable APIs and integrate full-stack systems efficiently.
+I continuously improve my skills by staying up to date with modern technologies and best practices. Currently freelancing, I’ve delivered real-world projects for global clients and aim to contribute my expertise to building impactful, production-ready applications.`
   const slicedText = fulltext.split(' ').slice(0, 20).join(' ');
 
   const [showFullText, setShowFullText] = useState(false);
