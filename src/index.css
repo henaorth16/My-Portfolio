@@ -1,54 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,700;0,900;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.wrapper::-webkit-scrollbar{
-    display: none;
-   }
-
-
-.awssld__content{
-    background-color: #141414;
-}
-.mobile-element{
-    background-color: #141414;
+@layer base {
+  body {
+    @apply bg-[#0c0d10] text-secondary-200 font-par antialiased;
     overflow-x: hidden;
-}
-
-.mobile-element > div {
-    width: 100%;
-    height: auto;
-    flex: 0 0 auto; /* Prevent flex items from shrinking */
   }
+}
 
-  #nav > .icon {
-    @apply fixed top-3 right-3 z-[100] bg-secondary-800 px-2 w-[3.1rem] h-[2.7rem] flex flex-col justify-around cursor-pointer hover:bg-secondary-700;
-    transition: transform 0.7s;
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0d10;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+.wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+.wrapper::-webkit-scrollbar-thumb {
+  background: rgba(220, 38, 38, 0.25);
+  border-radius: 9999px;
+}
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 38, 38, 0.6);
+}
+
+/* Awesome Slider Overrides */
+.awssld {
+  --slider-height-percentage: 100%;
+  --slider-transition-duration: 550ms;
+  --organic-arrow-thickness: 3px;
+  --organic-arrow-border-radius: 3px;
+  --organic-arrow-height: 24px;
+  --organic-arrow-color: #dc2626;
+  --control-button-width: 44px;
+  --control-button-height: 44px;
+  --control-button-background: rgba(20, 20, 20, 0.7);
+  --control-bullet-color: #404040;
+  --control-bullet-active-color: #dc2626;
+  --loader-bar-color: #dc2626;
+  --loader-bar-height: 3px;
+}
+
+.awssld__content {
+  background-color: #0e1013 !important;
+}
+
+.awssld__controls button {
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.awssld__controls button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .awssld__controls {
+    display: none !important;
   }
+}
 
 
-#nav .links {
-    @apply bg-secondary-800 w-full h-full fixed top-0 z-[90] left-0 flex justify-center items-center ;
-}
-#nav > .links > ul{
-    @apply flex flex-col gap-16 opacity-0;
-    transform: scale(0.7);
-    animation: .5s collap forwards linear  ;
-}
-@keyframes collap {
-    100% {
-        @apply gap-0 opacity-100 scale-[1];
-    }
-}
-#nav > .links > ul > li {
-    @apply py-1 px-5 w-[14rem] flex justify-center items-center;
-}
-#nav > .links > ul > li:not(:first-child){
-    border-top: 2px solid rgba(255, 255, 255, 0.219)
-
-}
-#nav > .links > ul > li > a {
-    @apply p-3 px-5 hover:text-secondary-400 transition duration-500 text-xl font-bold font-heading w-full text-center h-full;
-}

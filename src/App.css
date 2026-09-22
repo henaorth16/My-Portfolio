@@ -1,38 +1,118 @@
-.App{
-    --primary-clr: rgb(206, 24, 24);
+.App {
+  --primary-clr: #dc2626;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: Montserrat, sans-serif;
-}
-h1{
-    font-weight: 900;
-}
-div, p {
-    color: #a8a8a8;
-    font-family: Lato, sans-serif;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    user-select: none;
-    -webkit-user-select: none;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, sans-serif;
+  letter-spacing: -0.02em;
 }
 
-.contact-form{
-    padding-left: 1.9rem;
-    background-color: transparent;
-    border-bottom: 2px solid #333;
-    transition: border .4s;
-}
-.contact-form ~ label{
-    padding-left: .3rem;
-    transition: color .6s;
-    color: rgb(66, 66, 66);
-}
-.contact-form:focus, .contact-form:valid{
-    border-bottom: 2px solid #dc2626;
-    background-color: #1f1f1f;
+p, span, a, input, textarea {
+  font-family: Lato, Inter, sans-serif;
 }
 
-.contact-form:focus ~ label, .contact-form:valid ~ label{
-    color: #b32525;
+.contact-form {
+  padding-left: 2.75rem;
+  background-color: rgba(26, 26, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  color: #f5f5f5;
 }
+
+.contact-form:focus {
+  border-color: #dc2626;
+  background-color: rgba(30, 30, 38, 0.9);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+.contact-form::placeholder {
+  color: rgba(160, 160, 160, 0.5);
+}
+
+/* Avatar SVG Circle Animations */
+.avatar-svg-circle-main {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: avatarCircleCycle 18.5s cubic-bezier(0.45, 0.05, 0.25, 0.95) transform;
+  /* filter: drop-shadow(0 0 6px rgba(11, 7, 7, 0.55)); */
+}
+
+.avatar-svg-circle-accent {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: avatarAccentCycle 12s linear infinite;
+}
+
+@keyframes avatarCircleCycle {
+  /* 0%: Broken dashes rotating */
+  0% {
+    stroke-dasharray: 25 45 15 50 45 35 70 30;
+    stroke-dashoffset: 0;
+    transform: rotate(0deg);
+  }
+  /* 22%: Speed quickens, dashes lengthen and shift */
+  22% {
+    stroke-dasharray: 60 25 90 35 40 20 120 40;
+    stroke-dashoffset: -180;
+    transform: rotate(260deg);
+  }
+  /* 42%: Dashes smoothly fuse into a complete solid full circle */
+  42% {
+    stroke-dasharray: 616 0;
+    stroke-dashoffset: -400;
+    transform: rotate(440deg);
+  }
+  /* 58%: Holds as a continuous full circle rotating at a slow, majestic speed */
+  58% {
+    stroke-dasharray: 616 0;
+    stroke-dashoffset: -460;
+    transform: rotate(520deg);
+  }
+  /* 72%: Breaks apart briskly into energetic broken dashed lines */
+  72% {
+    stroke-dasharray: 15 80 35 45 20 75 40 50;
+    stroke-dashoffset: -600;
+    transform: rotate(700deg);
+  }
+  /* 88%: Rapid swirl with shifting fragmented dashes */
+  88% {
+    stroke-dasharray: 45 30 20 65 85 30 15 45;
+    stroke-dashoffset: -760;
+    transform: rotate(920deg);
+  }
+  /* 100%: Loops seamlessly back to the start */
+  100% {
+    stroke-dasharray: 25 45 15 50 45 35 70 30;
+    stroke-dashoffset: -930;
+    transform: rotate(1080deg);
+  }
+}
+
+@keyframes avatarAccentCycle {
+  0% {
+    stroke-dasharray: 8 95 20 120 12 100;
+    stroke-dashoffset: 0;
+    transform: rotate(360deg);
+    opacity: 0.3;
+  }
+  35% {
+    stroke-dasharray: 35 65 15 140 25 70;
+    stroke-dashoffset: 200;
+    transform: rotate(180deg);
+    opacity: 0.65;
+  }
+  65% {
+    stroke-dasharray: 10 150 15 130 30 80;
+    stroke-dashoffset: 400;
+    transform: rotate(0deg);
+    opacity: 0.35;
+  }
+  100% {
+    stroke-dasharray: 8 95 20 120 12 100;
+    stroke-dashoffset: 616;
+    transform: rotate(-360deg);
+    opacity: 0.3;
+  }
+}
+

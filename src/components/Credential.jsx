@@ -1,121 +1,85 @@
-import imgds from "../assets/image/dsajs.png"
-import imght from "../assets/image/htmlcss.png"
-import imgcpp from "../assets/image/imgcpp.jpg"
-import imgcss from "../assets/image/imgcss.jpg"
+import imgds from "../assets/image/dsajs.png";
+import imght from "../assets/image/htmlcss.png";
+import imgcpp from "../assets/image/imgcpp.jpg";
+import imgcss from "../assets/image/imgcss.jpg";
 import Title from "./Title";
 import { Img } from "react-image";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
+const certificates = [
+  {
+    title: "JavaScript Algorithms & Data Structures",
+    issuer: "freeCodeCamp",
+    image: imgds,
+    link: "https://www.freecodecamp.org/certification/henaorth/javascript-algorithms-and-data-structures",
+  },
+  {
+    title: "Responsive Web Design Certification",
+    issuer: "freeCodeCamp",
+    image: imght,
+    link: "https://www.freecodecamp.org/certification/henaorth/responsive-web-design",
+  },
+  {
+    title: "C++ Training Crash Course",
+    issuer: "Udemy",
+    image: imgcpp,
+    link: "https://www.udemy.com/certificate/UC-b886a8df-9a76-4030-aa09-49e9c7b0cb28/",
+  },
+  {
+    title: "Complete HTML5 and CSS3 Masterclass",
+    issuer: "Udemy",
+    image: imgcss,
+    link: "https://www.udemy.com/certificate/UC-8dc2edaf-bff8-4da4-9d1e-5069fec0f2fe/",
+  },
+];
+
 function Credential() {
-    return (
-        <div className=" bg-secondary-800 text-secondary-200 py-5 px-7 col-span-2 md:px-7 lg:px-9 rounded-xl">
-            <Title title="Certificate And Credentials"/>
-            <div className="flex flex-wrap justify-center gap-4 w-full ">
-                <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
-                    <Img
-                        className="absolute inset-0 w-full h-full object-cover object-top z-0"
-                        src={imgds}
-                        alt="Certificate image"
-                    />
-                    <div className="absolute px-4 opacity-100 sm:opacity-0 hover:opacity-100 transition-all duration-700 z-10 text-white bg-[#000000cc] w-full h-full inset-0">
-                        <h2 className="text-xl text-center font-bold mb-2">
-                            Javascript Datastructure and Algorithm
-                        </h2>
-                        <h4 className="text-sm text-primary-600 text-center font-light mb-1">
-                            Free Code Camp
-                        </h4>
-                        <p className="leading-tight text-[0.93rem]">
-                        This course provided an in-depth exploration of fundamental programming concepts and problem-solving techniques using JavaScript.
-                        </p>
-                        <div className=" my-4 w-full text-right ">
-                            <a
-                                href="https://www.freecodecamp.org/certification/henaorth/javascript-algorithms-and-data-structures"
-                                className=" bg-primary-600 hover:bg-primary-800 px-6 py-2 rounded-full mt-[1rem]"
-                            >
-                                Checkout
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
-                    <Img
-                        className="absolute inset-0 w-full h-full object-cover object-top z-0"
-                        src={imght}
-                        alt="html css certificate"
-                    />
-                    <div className="absolute px-4 opacity-100 sm:opacity-0 hover:opacity-100 transition-all duration-700 z-10 text-white bg-[#000000cc] w-full h-full inset-0">
-                        <h2 className="text-xl text-center font-bold mb-2">
-                            Responsive Web Design
-                        </h2>
-                        <h4 className="text-sm text-primary-600 text-center font-light mb-1">
-                            Free Code Camp
-                        </h4>
-                        <p className="leading-tight text-[0.93]">
-                        This comprehensive course covered all the essential aspects of modern web design, including HTML5, CSS3, Flexbox, and CSS Grid. Through a series of hands-on projects and challenges.
-                        </p>
-                        <div className=" my-4 w-full text-right ">
-                            <a
-                                href="https://www.freecodecamp.org/certification/henaorth/responsive-web-design"
-                                className=" bg-primary-600 hover:bg-primary-800 px-6 py-2 rounded-full mt-[1rem]"
-                            >
-                                Checkout
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
-                    <Img
-                        className="absolute inset-0 w-full h-full object-cover object-top z-0"
-                        src={imgcpp}
-                        alt="c++ certificate"
-                    />
-                    <div className="absolute px-4 opacity-100 sm:opacity-0 hover:opacity-100 transition-all duration-700 z-10 text-white bg-[#000000cc] w-full h-full inset-0">
-                        <h2 className="text-xl text-center font-bold mb-2">
-                            C++ Training Crash Course
-                        </h2>
-                        <h4 className="text-sm text-primary-600 text-center font-light mb-1">
-                            Udemy
-                        </h4>
-                        <p className="leading-tight text-[0.93]">
-                        This course focused on special behavior of C++. and algorithm scripting using c++.
-                        </p>
-                        <div className=" my-4 w-full text-right ">
-                            <a
-                                href="https://www.udemy.com/certificate/UC-b886a8df-9a76-4030-aa09-49e9c7b0cb28/"
-                                className=" bg-primary-600 hover:bg-primary-800 px-6 py-2 rounded-full mt-[1rem]"
-                            >
-                                Checkout
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex-1 min-h-[17rem] overflow-hidden rounded-xl relative md:w-[49.2%] min-w-[18rem] bg-primary-500 p-4">
-                    <Img
-                        className="absolute inset-0 w-full h-full object-cover object-top z-0"
-                        src={imgcss}
-                        alt="html and css certificate image"
-                    />
-                    <div className="absolute px-4 opacity-100 sm:opacity-0 hover:opacity-100 transition-all duration-700 z-10 text-white bg-[#000000cc] w-full h-full inset-0">
-                        <h2 className="text-xl text-center font-bold mb-2">
-                            Html5 and Css3 complete course.
-                        </h2>
-                        <h4 className="text-sm text-primary-600 text-center font-light mb-1">
-                            Udemy
-                        </h4>
-                        <p className="leading-tight text-[0.93]">
-                        This course helps me to improve my skill at building user-friendly and responsive websites
-                        </p>
-                        <div className=" my-4 w-full text-right ">
-                            <a
-                                href="https://www.udemy.com/certificate/UC-8dc2edaf-bff8-4da4-9d1e-5069fec0f2fe/"
-                                className=" bg-primary-600 hover:bg-primary-800 px-6 py-2 rounded-full mt-[1rem]"
-                            >
-                                Checkout
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="rounded-md p-5 sm:p-6 col-span-2 border border-secondary-800 bg-secondary-900/90">
+      <Title title="Certifications" />
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 mt-3.5">
+        {certificates.map((cert, index) => (
+          <div
+            key={index}
+            className="rounded-md overflow-hidden bg-secondary-950/70 border border-secondary-800 flex flex-col justify-between"
+          >
+            <div className="relative h-32 sm:h-36 overflow-hidden bg-secondary-950">
+              <Img
+                className="w-full h-full object-cover object-top"
+                src={cert.image}
+                alt={cert.title}
+              />
             </div>
-        </div>
-    );
+
+            <div className="p-3 flex-1 flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-mono text-primary-400">
+                  {cert.issuer}
+                </span>
+                <h3 className="font-heading font-semibold text-sm text-secondary-100 line-clamp-2 mt-1">
+                  {cert.title}
+                </h3>
+              </div>
+
+              <div className="pt-2 mt-1.5 border-t border-secondary-800/80">
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary-400 hover:text-primary-300"
+                >
+                  Verify <FaExternalLinkAlt className="text-xs" />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Credential;
+
+

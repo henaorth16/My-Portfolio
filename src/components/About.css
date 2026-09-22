@@ -67,37 +67,61 @@
   } */
   
 
-  button.awssld__next::before{
-   content: "Next";
+  button.awssld__next:not([data-page-title])::before,
+  button.awssld__next[data-page-title=""]::before,
+  button.awssld__prev:not([data-page-title])::after,
+  button.awssld__prev[data-page-title=""]::after {
+    display: none !important;
+  }
+
+  button.awssld__next::before {
+    content: attr(data-page-title);
     position: absolute;
-    left: 0;
-    transform: translateX(-40%);
+    right: 120%;
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: #0f0f13;
+    color: #f3f4f6;
+    border: 1px solid #2d2d38;
+    font-family: Montserrat, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
     pointer-events: none;
     opacity: 0;
-    transition: .4s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 100;
   }
-  button.awssld__next:hover::before{
-    left: 0;
-    transform: translateX(-70%);
-    opacity: .35;
+  button.awssld__next:hover::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
   }
- 
- 
-  button.awssld__prev::after{
-   content: "Previous";
+
+  button.awssld__prev::after {
+    content: attr(data-page-title);
     position: absolute;
-    right: 0;
-    transform: translateX(40%);
+    left: 120%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-6px);
+    background: #0f0f13;
+    color: #f3f4f6;
+    border: 1px solid #2d2d38;
+    font-family: Montserrat, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
     pointer-events: none;
     opacity: 0;
-    transition: .4s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 100;
   }
-  button.awssld__prev:hover::after{
-    right: 0;
-    transform: translateX(70%);
-    opacity: .35;
+  button.awssld__prev:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
   }
-
-
-
- 

@@ -1,42 +1,113 @@
-import image from '../assets/image/image.jpg'
-import { Fade } from "react-awesome-reveal";
-import { Img } from "react-image";
+import { Fade } from 'react-awesome-reveal';
+import { Img } from 'react-image';
+import { FaGithub, FaFilePdf } from 'react-icons/fa';
+import image from '../assets/image/image.jpg';
 
 function Home() {
-    return <>
-        <div id="home" className="text-secondary-200 text-center h-full w-full flex justify-center items-center">
-            <div className="flex flex-col justify-center items-center md:w-[60%] w-3/4 gap-3 font-par">
-                <Fade>
-                    <div className="w-[10rem] h-[10rem] mb-6">
-                        <Img className="w-[460px] h-[100%] object-fill rounded-full" src={image} alt="hero image" />
-                    </div>
-                </Fade>
-                <Fade>
-                    <h2 className="text-xl font-bold tracking-wider text-secondary-500">👋Hello, Here is <Fade><span className="text-primary-500 text-[1.4rem] font-heading font-bold">HENOK EMYAYE</span></Fade>  </h2>
-                </Fade>
-                    <p>Full-stack, Front-end, Problem Solving, Collaboration, TypeScript, Reactjs, Nextjs, expressjs</p>
-                <div className="text-secondary-400 text-sm md:text-base flex gap-3">
-                    <a href="https://drive.google.com/file/d/1AlFVg32EF30vwmE7GKqfD1MpwWHK4keT/view?usp=drivesdk" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-950 rounded-md hover:bg-opacity-50  focus:z-10 focus:ring-1 focus:outline-none">
-                        <svg className="w-5 h-5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#dc2626" viewBox="0 0 20 20">
-                            <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
-                            <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
-                        </svg> Open Resume
-                    </a>
-                    <a href="https://github.com/henaorth16" target="_blank" rel="noreferrer" className="peer inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-950 rounded-md hover:bg-opacity-50  focus:z-10 focus:ring-1 focus:outline-none">
-                        <svg className="w-5 h-5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#dc2626" viewBox="0 0 24 24">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.606-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.624-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
-                        </svg>
-                        Github
-                    </a>
-                    <img
-                        className="absolute top-1/3 right-2/5 hidden peer-hover:block"
-                        src="https://github-readme-stats.vercel.app/api?username=henaorth16&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide=prs"
-                        alt="GitHub Stats"
-                    />
-                </div>
+  return (
+    <section id="home" className="h-full w-full flex items-center justify-center px-4">
+      <div className="flex flex-col items-center text-center max-w-xl mx-auto space-y-5 font-par">
+        
+        {/* Animated Avatar with Dynamic Broken Line to Full Circle SVG */}
+        <Fade triggerOnce>
+          <div className="relative flex items-center justify-center p-3">
+            {/* Animated SVG Circles */}
+            <svg
+              className="absolute w-40 h-40 sm:w-44 sm:h-44 pointer-events-none select-none"
+              viewBox="0 0 220 220"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Subtle background track */}
+              <circle
+                cx="110"
+                cy="110"
+                r="98"
+                stroke="rgba(220, 38, 38, 0.15)"
+                strokeWidth="1"
+              />
+
+              {/* Secondary outer broken accent ring rotating at a different speed */}
+              {/* <circle
+                cx="110"
+                cy="110"
+                r="104"
+                stroke="#ef4444"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                className="avatar-svg-circle-accent"
+              /> */}
+
+              {/* Main animated red ring: broken lines rotating and morphing into a full circle */}
+              <circle
+                cx="110"
+                cy="110"
+                r="98"
+                stroke="#dc2626"
+                strokeWidth="3.5"
+                strokeLinecap="round"
+                className="avatar-svg-circle-main"
+              />
+            </svg>
+
+            {/* Avatar Image */}
+            <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-secondary-800/80 shadow-2xl relative z-10">
+              <Img
+                className="w-full h-full object-cover"
+                src={image}
+                alt="Henok Emyaye"
+              />
             </div>
-        </div>
-    </>
+          </div>
+        </Fade>
+
+        {/* Name & Role */}
+        <Fade triggerOnce delay={100}>
+          <div className="space-y-1.5">
+            <h1 className="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
+              HENOK <span className="text-primary-500">EMYAYE</span>
+            </h1>
+            <p className="text-secondary-300 font-medium text-base sm:text-lg">
+              Full-Stack & Frontend Developer
+            </p>
+          </div>
+        </Fade>
+
+        {/* Minimal Bio */}
+        <Fade triggerOnce delay={150}>
+          <p className="text-secondary-300 text-sm sm:text-base leading-relaxed max-w-lg">
+            Specializing in React, Next.js, TypeScript, and Node.js. Building fast, responsive, and production-ready web applications.
+          </p>
+        </Fade>
+
+        {/* Action Buttons with small border radius */}
+        <Fade triggerOnce delay={200}>
+          <div className="flex items-center gap-3.5 pt-2">
+            <a
+              href="https://drive.google.com/file/d/1AlFVg32EF30vwmE7GKqfD1MpwWHK4keT/view?usp=drivesdk"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 text-sm sm:text-base font-semibold font-heading text-white bg-primary-600 hover:bg-primary-500 rounded-md transition-colors shadow-sm"
+            >
+              <FaFilePdf className="text-base" /> Resume
+            </a>
+
+            <a
+              href="https://github.com/henaorth16"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 text-sm sm:text-base font-semibold font-heading text-secondary-200 bg-secondary-900 hover:bg-secondary-800 border border-secondary-700 rounded-md transition-colors"
+            >
+              <FaGithub className="text-lg" /> GitHub
+            </a>
+          </div>
+        </Fade>
+
+      </div>
+    </section>
+  );
 }
 
-export default Home
+export default Home;
+
+

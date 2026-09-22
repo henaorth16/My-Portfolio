@@ -1,25 +1,40 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import Title from './Title';
 
 function Me() {
-  const fulltext = `My name is Henok, a self-taught full-stack developer with over three years of experience, primarily focused on frontend development. I specialize in building responsive, high-performance web applications using Next.js, React.js, HTML, CSS, and JavaScript, with strong attention to clean UI/UX and performance.
-On the frontend, I’m experienced with Tailwind CSS, Shadcn Ui, and Material UI for creating modern, scalable interfaces. On the backend, I work with Node.js frameworks like Express.js and NestJS to build reliable APIs and integrate full-stack systems efficiently.
-I continuously improve my skills by staying up to date with modern technologies and best practices. Currently freelancing, I’ve delivered real-world projects for global clients and aim to contribute my expertise to building impactful, production-ready applications.`
-  const slicedText = fulltext.split(' ').slice(0, 20).join(' ');
-
   const [showFullText, setShowFullText] = useState(false);
 
   return (
-    <div className='bg-secondary-800 text-secondary-300 group py-5 px-7 col-span-2 md:px-10 rounded-xl'>
-      <Title title="About Me"/>
-      <p className='my-3 md:leading-relaxed text-lg group:focus:text-200 text-justify md:px-6'>{showFullText && fulltext.split(' ').length > 25 ? fulltext : `${slicedText}...`}
-        <button className='text-primary-600 ml-2' onClick={() => setShowFullText(!showFullText)}>
-          {showFullText ? "Less" : "More"}
-        </button>
-      </p>
+    <div className="rounded-md p-5 sm:p-6 col-span-2 border border-secondary-800 bg-secondary-900/90">
+      <Title title="About Me" />
 
+      <div className="space-y-3.5 text-secondary-300 text-sm sm:text-base leading-relaxed">
+        <p>
+          I am <strong className="text-secondary-100 font-semibold">Henok Emyaye</strong>, a full-stack developer with 3+ years of experience specializing in building responsive, scalable web applications with React, Next.js, TypeScript, and modern CSS.
+        </p>
+
+        {showFullText && (
+          <div className="space-y-3.5 pt-1">
+            <p>
+              On the frontend, I create fast and intuitive interfaces using Tailwind CSS, Shadcn UI, and state management tools. On the backend, I build RESTful APIs with Node.js, Express, and NestJS connected to MongoDB and SQL databases.
+            </p>
+            <p>
+              I work with international clients and teams, maintaining clean code standards, git workflow, and end-to-end performance optimization.
+            </p>
+          </div>
+        )}
+
+        <button
+          onClick={() => setShowFullText(!showFullText)}
+          className="text-primary-500 hover:text-primary-400 font-semibold text-sm pt-1.5 transition-colors block"
+        >
+          {showFullText ? 'Show Less ↑' : 'Read More ↓'}
+        </button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Me
+export default Me;
+
+
