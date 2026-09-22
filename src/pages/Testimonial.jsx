@@ -1,4 +1,3 @@
-import Image from "../assets/image/geez.png"
 import { FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { Img } from "react-image";

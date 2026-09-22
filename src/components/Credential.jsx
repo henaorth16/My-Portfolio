@@ -1,4 +1,3 @@
-import React from "react";
 import imgds from "../assets/image/dsajs.png"
 import imght from "../assets/image/htmlcss.png"
 import imgcpp from "../assets/image/imgcpp.jpg"

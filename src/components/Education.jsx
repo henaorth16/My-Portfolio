@@ -1,4 +1,3 @@
-import React from 'react'
 import { Fade } from "react-awesome-reveal";
 import Title from './Title';
 
@@ -9,7 +8,7 @@ function Education() {
         <div >
         </div>
           <Fade delay={300}>
-        <p className='text-justify'>As i told you above here i am a  <strong>Self Taught</strong>,  During my high school years at "Andarge" private school until 2021, I delved into web development through online resources, particularly YouTube and various websites. Despite lacking a formal degree, my passion for frontend development led me to acquire comprehensive skills and knowledge. Currently i finished with TVET in Microlink IT College.</p>
+        <p className='text-justify'>As i told you above here i am a  <strong>Self Taught</strong>,  During my high school years at &quot;Andarge&quot; private school until 2021, I delved into web development through online resources, particularly YouTube and various websites. Despite lacking a formal degree, my passion for frontend development led me to acquire comprehensive skills and knowledge. Currently i finished with TVET in Microlink IT College.</p>
           </Fade>
     </div>
   )

@@ -1,5 +1,4 @@
 import { Img } from "react-image"
-import imgGeez from "../assets/image/geez.png"
 import imgTour from "../assets/image/tour.png"
 import imgComp from "../assets/image/complain.png"
 import imgAmazing from "../assets/image/amazing.png"
@@ -117,10 +116,10 @@ export default function Portfolio() {
                 {list.liveLink === "" ? (
                   <p className='text-sm bg-secondary-800 opacity-90 text-secondary-400 py-2 px-4'>not deployed yet </p>
                 ) : (
-                  <a href={list.liveLink} target='_blank' className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-800 rounded-md hover:bg-secondary-700 focus:border">Live Demo</a>
+                  <a href={list.liveLink} target='_blank' rel="noreferrer" className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-800 rounded-md hover:bg-secondary-700 focus:border">Live Demo</a>
                 )}
                 {list.gitRepoLink ? (
-                  <a href={list.gitRepoLink} target='_blank' className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-800 rounded-md hover:bg-secondary-700 focus:border">See on Github</a>
+                  <a href={list.gitRepoLink} target='_blank' rel="noreferrer" className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-800 rounded-md hover:bg-secondary-700 focus:border">See on Github</a>
                 ) : (
                   <p className="inline-flex items-center px-4 py-2 text-sm font-medium text-secondary-200 bg-secondary-800 opacity-60 rounded-md ">Private</p>
                 )

@@ -1,5 +1,5 @@
 // import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { lazy, Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/custom-animations/open-animation.css';
 import 'react-awesome-slider/dist/styles.css';

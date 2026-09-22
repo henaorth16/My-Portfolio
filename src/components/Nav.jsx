@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 function Nav() {
   const [isNav, setIsNav] = useState(false)
 

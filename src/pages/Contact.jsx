@@ -1,5 +1,5 @@
 import Form from '../components/Form'
-import Title, { MainTitle } from '../components/Title'
+import { MainTitle } from '../components/Title'
 
 function Contact() {
   return (
@@ -8,7 +8,7 @@ function Contact() {
         {/* <h1 className='text-primary-500 text-3xl text-center font-semibold mt-20'>Contact</h1> */}
         <MainTitle title="Contact"/>
         <hr className='w-full my-4 text-secondary-500' />
-        <p className='text-secondary-250 lg:px-[10%]'>Feel free to get in touch! Whether you have a project idea, want to collaborate, or just want to say hello, I'm always open to connecting. You can reach me through the form below or drop me an <a href="mailto:emyayehenok@gmail.com" className='text-primary-500 underline'>Email</a>. Looking forward to hearing from you!</p>
+        <p className='text-secondary-250 lg:px-[10%]'>Feel free to get in touch! Whether you have a project idea, want to collaborate, or just want to say hello, I&apos;m always open to connecting. You can reach me through the form below or drop me an <a href="mailto:emyayehenok@gmail.com" className='text-primary-500 underline'>Email</a>. Looking forward to hearing from you!</p>
         <Form />
         <Links />
       </div>

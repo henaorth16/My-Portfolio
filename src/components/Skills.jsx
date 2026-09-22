@@ -1,4 +1,3 @@
-import React from 'react'
 import { Fade } from "react-awesome-reveal";
 import './skill.css'
 import Title from './Title';
@@ -58,7 +57,7 @@ function Skills() {
             <Title title="Skills" />
             <div className='skill-list  w-full h-auto mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 md:gap-3'>
                 {skills.map((skill, index) => (
-                    <Fade>
+                    <Fade key={index}>
                         <div className="min-h-[4.4em] p-3 rounded-md bg-secondary-700 flex gap-2 md:gap-4 border-l-8 border-primary-500 items-center" >
                             <div className="w-[20%] max-w-[3.5rem]">
                                 <Img src={skill.icon} loading='lazy' alt={skill.title} className='w-full' />

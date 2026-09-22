@@ -1,4 +1,3 @@
-import React from 'react'
 import "./About.css"
 import { Fade } from "react-awesome-reveal";
 import { MdAccessTimeFilled } from "react-icons/md";

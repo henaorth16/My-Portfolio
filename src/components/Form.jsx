@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser';
 import { FaUser } from 'react-icons/fa6'
 import { GrMail } from "react-icons/gr";
@@ -9,7 +9,7 @@ function Form() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [success, setSuccess] = useState(false)
-  const [successMessage, setSuccessMessage] = useState("sent!")
+  const [successMessage] = useState("sent!")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +26,7 @@ function Form() {
     }
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
+      .then(() => {
         console.log("Email sent successfully!");
         setName('')
         setEmail('')
