@@ -17,7 +17,7 @@ const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Testimonial = lazy(() => import('./pages/Testimonial'));
 const Contact = lazy(() => import('./pages/Contact'));
 
-export const SLIDES = [
+const SLIDES = [
   { path: '/', label: 'Home', title: 'Henok Emyaye | Full-Stack Developer' },
   { path: '/about', label: 'About', title: 'Henok Emyaye | About Me' },
   { path: '/portfolio', label: 'Projects', title: 'Henok Emyaye | Featured Projects' },
