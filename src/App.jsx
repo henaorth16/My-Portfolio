@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useRef } from 'react';
 import { useLocation, useNavigate, Routes, Route } from 'react-router-dom';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/custom-animations/open-animation.css';
@@ -133,8 +133,54 @@ function App() {
     return typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   };
 
+  // Custom touch event handlers to fix horizontal swiping on scrollable mobile pages
+  const touchStart = useRef(null);
+  const touchEnd = useRef(null);
+
+  // Minimum swipe distance required
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    touchEnd.current = null;
+    touchStart.current = {
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY,
+    };
+  };
+
+  const onTouchMove = (e) => {
+    touchEnd.current = {
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY,
+    };
+  };
+
+  const onTouchEndHandler = () => {
+    if (!touchStart.current || !touchEnd.current) return;
+
+    const distanceX = touchStart.current.x - touchEnd.current.x;
+    const distanceY = touchStart.current.y - touchEnd.current.y;
+    const isLeftSwipe = distanceX > minSwipeDistance;
+    const isRightSwipe = distanceX < -minSwipeDistance;
+
+    // Check if the swipe is primarily horizontal
+    if (Math.abs(distanceX) > Math.abs(distanceY)) {
+      if (isLeftSwipe && activeIndex < SLIDES.length - 1) {
+        navigate(SLIDES[activeIndex + 1].path);
+      }
+      if (isRightSwipe && activeIndex > 0) {
+        navigate(SLIDES[activeIndex - 1].path);
+      }
+    }
+  };
+
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden bg-[#0a0b0f] select-text">
+    <div
+      className="relative w-full h-[100vh] overflow-hidden bg-[#0a0b0f] select-text"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEndHandler}
+    >
       {/* Custom Animated Cursor (Desktop only) */}
       {!isMobileDevice() && (
         <AnimatedCursor
@@ -158,7 +204,7 @@ function App() {
           bullets={false}
           fillParent={true}
           animation="openAnimation"
-          mobileTouch={true}
+          mobileTouch={false}
           onTransitionEnd={handleTransitionEnd}
           className="bg-[#0a0b0f]"
           fill=""
