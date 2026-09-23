@@ -23,27 +23,16 @@ function Home() {
                 cx="110"
                 cy="110"
                 r="98"
-                stroke="rgba(220, 38, 38, 0.15)"
-                strokeWidth="1"
+                stroke="rgba(225, 29, 72, 0.15)"
+                strokeWidth="1.5"
               />
 
-              {/* Secondary outer broken accent ring rotating at a different speed */}
-              {/* <circle
-                cx="110"
-                cy="110"
-                r="104"
-                stroke="#ef4444"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                className="avatar-svg-circle-accent"
-              /> */}
-
-              {/* Main animated red ring: broken lines rotating and morphing into a full circle */}
+              {/* Main animated flame crimson ring: broken lines rotating and morphing into a full circle */}
               <circle
                 cx="110"
                 cy="110"
                 r="98"
-                stroke="#dc2626"
+                stroke="#e11d48"
                 strokeWidth="3.5"
                 strokeLinecap="round"
                 className="avatar-svg-circle-main"

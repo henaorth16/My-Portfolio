@@ -134,11 +134,11 @@ function App() {
   };
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden bg-[#0c0d10] select-text">
+    <div className="relative w-full h-[100vh] overflow-hidden bg-[#0a0b0f] select-text">
       {/* Custom Animated Cursor (Desktop only) */}
       {!isMobileDevice() && (
         <AnimatedCursor
-          color="220,38,38"
+          color="225,29,72"
           innerSize={7}
           outerSize={28}
           innerScale={1}
@@ -160,7 +160,7 @@ function App() {
           animation="openAnimation"
           mobileTouch={true}
           onTransitionEnd={handleTransitionEnd}
-          className="bg-[#0c0d10]"
+          className="bg-[#0a0b0f]"
           fill=""
         >
           {/* Slide 0: Home */}

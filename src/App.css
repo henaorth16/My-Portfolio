@@ -1,5 +1,5 @@
 .App {
-  --primary-clr: #dc2626;
+  --primary-clr: #e11d48;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,29 +13,29 @@ p, span, a, input, textarea {
 
 .contact-form {
   padding-left: 2.75rem;
-  background-color: rgba(26, 26, 32, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(19, 21, 28, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0.75rem;
   transition: all 0.3s ease;
-  color: #f5f5f5;
+  color: #f1f5f9;
 }
 
 .contact-form:focus {
-  border-color: #dc2626;
-  background-color: rgba(30, 30, 38, 0.9);
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+  border-color: #e11d48;
+  background-color: rgba(22, 25, 34, 0.9);
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
 }
 
 .contact-form::placeholder {
-  color: rgba(160, 160, 160, 0.5);
+  color: rgba(148, 163, 184, 0.5);
 }
 
 /* Avatar SVG Circle Animations */
 .avatar-svg-circle-main {
   transform-box: fill-box;
   transform-origin: center;
-  animation: avatarCircleCycle 18.5s cubic-bezier(0.45, 0.05, 0.25, 0.95) transform;
-  /* filter: drop-shadow(0 0 6px rgba(11, 7, 7, 0.55)); */
+  animation: avatarCircleCycle 8.5s cubic-bezier(0.45, 0.05, 0.25, 0.95) infinite;
+  filter: drop-shadow(0 0 8px rgba(225, 29, 72, 0.5));
 }
 
 .avatar-svg-circle-accent {
