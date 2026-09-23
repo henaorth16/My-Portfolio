@@ -10,7 +10,13 @@ h1, h2, h3, h4, h5, h6 {
 p, span, a, input, textarea {
   font-family: Lato, Inter, sans-serif;
 }
-
+button.awssld__prev:hover::after, button.awssld__next:hover::before{
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
 .contact-form {
   padding-left: 2.75rem;
   background-color: rgba(19, 21, 28, 0.6);
