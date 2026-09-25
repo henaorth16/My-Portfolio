@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate, Routes, Route } from 'react-router-dom';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/custom-animations/open-animation.css';
@@ -35,10 +35,17 @@ const pathToIndex = (pathname) => {
   return 0;
 };
 
+const SWIPE_MIN_DISTANCE = 60;
+const SWIPE_MAX_DURATION = 900;
+const SLIDE_SYNC_TIMEOUT = 1500;
+
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const activeIndex = pathToIndex(location.pathname);
+  const [sliderKey, setSliderKey] = useState(0);
+  const sliderIndexRef = useRef(activeIndex);
+  const touchStartRef = useRef(null);
 
   // Sync document title with current active slide
   useEffect(() => {
@@ -101,14 +108,59 @@ function App() {
   }, [activeIndex]);
 
 
-  // Sync route after slide transitions (arrow clicks, touch swipes)
+  // Sync route after slide transitions (arrow clicks)
   const handleTransitionEnd = (sliderInfo) => {
     const nextIdx = sliderInfo?.currentIndex ?? sliderInfo?.nextIndex;
     if (typeof nextIdx === 'number' && nextIdx >= 0 && nextIdx < SLIDES.length) {
+      sliderIndexRef.current = nextIdx;
       const targetPath = SLIDES[nextIdx].path;
       if (location.pathname !== targetPath) {
         navigate(targetPath);
       }
+    }
+  };
+
+  // Recover from a slider whose internal transition never completed and which
+  // therefore ignores every further navigation request
+  useEffect(() => {
+    if (sliderIndexRef.current === activeIndex) return undefined;
+
+    const timer = setTimeout(() => {
+      if (sliderIndexRef.current !== activeIndex) {
+        sliderIndexRef.current = activeIndex;
+        setSliderKey((key) => key + 1);
+      }
+    }, SLIDE_SYNC_TIMEOUT);
+
+    return () => clearTimeout(timer);
+  }, [activeIndex]);
+
+  // Touch swipe navigation (horizontal swipes only, so vertical scrolling works)
+  const handleTouchStart = (e) => {
+    if (e.touches.length !== 1) {
+      touchStartRef.current = null;
+      return;
+    }
+    const touch = e.touches[0];
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() };
+  };
+
+  const handleTouchEnd = (e) => {
+    const start = touchStartRef.current;
+    touchStartRef.current = null;
+    if (!start || !e.changedTouches.length) return;
+
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - start.x;
+    const deltaY = touch.clientY - start.y;
+
+    if (Date.now() - start.time > SWIPE_MAX_DURATION) return;
+    if (Math.abs(deltaX) < SWIPE_MIN_DISTANCE) return;
+    if (Math.abs(deltaX) < Math.abs(deltaY) * 1.5) return;
+
+    const targetIndex = deltaX < 0 ? activeIndex + 1 : activeIndex - 1;
+    if (targetIndex >= 0 && targetIndex < SLIDES.length) {
+      navigate(SLIDES[targetIndex].path);
     }
   };
 
@@ -134,7 +186,14 @@ function App() {
   };
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden bg-[#0a0b0f] select-text">
+    <div
+      className="relative w-full h-[100vh] overflow-hidden bg-[#0a0b0f] select-text"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={() => {
+        touchStartRef.current = null;
+      }}
+    >
       {/* Custom Animated Cursor (Desktop only) */}
       {!isMobileDevice() && (
         <AnimatedCursor
@@ -154,11 +213,12 @@ function App() {
       {/* Main Horizontal AwesomeSlider Container */}
       <Suspense fallback={<Loader />}>
         <AwesomeSlider
+          key={sliderKey}
           selected={activeIndex}
           bullets={false}
           fillParent={true}
           animation="openAnimation"
-          mobileTouch={true}
+          mobileTouch={false}
           onTransitionEnd={handleTransitionEnd}
           className="bg-[#0a0b0f]"
           fill=""
